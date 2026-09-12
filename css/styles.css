@@ -1811,3 +1811,713 @@ ul, ol {
   }
 }
 
+
+/* ════════════════════════════════════════════════════════
+   NEW: NAVBAR AUTH BUTTONS & КУРСТАР
+════════════════════════════════════════════════════════ */
+
+/* Small button variant for the nav */
+.btn--sm {
+  font-size: 0.82rem;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+}
+
+.btn--ghost.btn--sm {
+  padding: 7px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Auth button group (Sign In + Sign Up side by side) */
+.nav-auth-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Курстар protected nav button */
+.nav-link--courses {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-family: var(--font-primary);
+  cursor: pointer;
+  /* inherits .nav-link styles via class */
+}
+
+.courses-lock-icon {
+  opacity: 0.5;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-link--courses:hover .courses-lock-icon {
+  opacity: 1;
+  color: #a78bfa;
+}
+
+/* ─── User chip (logged-in state) ────────────────────── */
+.nav-user-menu {
+  list-style: none;
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-full);
+  padding: 5px 14px 5px 5px;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.user-chip:hover {
+  border-color: rgba(167, 139, 250, 0.3);
+  background: var(--glass-bg-strong);
+}
+
+.user-chip__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.user-chip__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-chip__name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text);
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-chip__signout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+  padding: 0;
+}
+
+.user-chip__signout:hover {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+
+/* ════════════════════════════════════════════════════════
+   NEW: AUTH MODAL
+════════════════════════════════════════════════════════ */
+.auth-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+.auth-modal[hidden] {
+  display: none;
+}
+
+/* Backdrop */
+.auth-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 16, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.auth-modal.is-visible .auth-modal__backdrop {
+  opacity: 1;
+}
+
+/* Dialog box */
+.auth-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  max-height: 92dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: translateY(24px) scale(0.97);
+  opacity: 0;
+  transition:
+    transform var(--transition-spring),
+    opacity var(--transition-slow);
+}
+
+/* Custom scrollbar inside dialog */
+.auth-modal__dialog::-webkit-scrollbar { width: 4px; }
+.auth-modal__dialog::-webkit-scrollbar-track { background: transparent; }
+.auth-modal__dialog::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
+.auth-modal.is-visible .auth-modal__dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Close button */
+.auth-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-spring);
+}
+
+.auth-modal__close:hover {
+  color: #fff;
+  background: var(--glass-bg-strong);
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* Modal header */
+.auth-modal__header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.auth-modal__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.auth-modal__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.auth-modal__subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Tab switcher */
+.auth-tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.04);
+  border: var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: var(--spacing-lg);
+  gap: 4px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 9px;
+  border: none;
+  border-radius: calc(var(--radius-md) - 2px);
+  font-family: var(--font-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: none;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.auth-tab.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Google sign-in button */
+.btn-google {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-spring);
+  margin-bottom: var(--spacing-md);
+}
+
+.btn-google:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+.btn-google:active {
+  transform: scale(0.97);
+}
+
+.btn-google:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Divider "немесе" */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-dim);
+  font-size: 0.78rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Auth forms */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.auth-form .form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Auth error message */
+.auth-error {
+  font-size: 0.82rem;
+  color: #f87171;
+  margin-bottom: var(--spacing-sm);
+  min-height: 18px;
+  line-height: 1.4;
+  display: block;
+}
+
+/* Password input wrapper */
+.input-password-wrapper {
+  position: relative;
+}
+
+.input-password-wrapper .form-input {
+  padding-right: 44px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.toggle-password:hover {
+  color: var(--color-text);
+}
+
+/* ════════════════════════════════════════════════════════
+   NEW: COURSES SECTION
+════════════════════════════════════════════════════════ */
+.courses-section {
+  padding-block: var(--spacing-3xl);
+}
+
+/* ── Locked state ─────────────────────────────────────── */
+.courses-locked {
+  display: flex;
+  justify-content: center;
+}
+
+.courses-locked__card {
+  max-width: 520px;
+  width: 100%;
+  padding: var(--spacing-2xl);
+  text-align: center;
+  border-radius: var(--radius-xl);
+}
+
+.courses-locked__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.courses-locked__card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: var(--spacing-sm);
+}
+
+.courses-locked__card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-xl);
+}
+
+.courses-locked__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* ── Dashboard header ─────────────────────────────────── */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+}
+
+.dashboard-welcome {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.dashboard-avatar {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.dashboard-greeting {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.dashboard-welcome-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.dash-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.dash-stat__num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.dash-stat__label {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ── Course cards grid ────────────────────────────────── */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.course-card {
+  position: relative;
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  border-radius: var(--radius-lg);
+}
+
+.course-card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.course-badge--active {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #34d399;
+}
+
+.course-badge--new {
+  background: rgba(167, 139, 250, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  color: #a78bfa;
+}
+
+.course-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform var(--transition-spring);
+}
+
+.course-card:hover .course-card__icon {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.course-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  padding-right: 60px; /* clear badge */
+}
+
+.course-card__desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Progress bar */
+.course-card__progress {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.course-progress-bar {
+  flex: 1;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.course-progress-fill {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: 3px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.course-progress-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  min-width: 28px;
+  text-align: right;
+}
+
+.course-card__btn {
+  margin-top: var(--spacing-xs);
+  align-self: flex-start;
+}
+
+/* Add course card */
+.course-card--add {
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    border-color var(--transition-slow),
+    background var(--transition-slow);
+}
+
+.course-card--add:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  background: rgba(167, 139, 250, 0.04);
+  transform: translateY(-4px);
+}
+
+.course-card__add-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-sm);
+  height: 100%;
+  min-height: 200px;
+}
+
+.course-add-icon {
+  font-size: 2rem;
+  color: var(--color-text-dim);
+  line-height: 1;
+}
+
+.course-card--add h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.course-card--add p {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+}
+
+/* ── Responsive for auth modal + courses ──────────────── */
+@media (max-width: 560px) {
+  .auth-modal__dialog {
+    padding: var(--spacing-lg) var(--spacing-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .auth-modal__title {
+    font-size: 1.25rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-auth-group {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .user-chip__name {
+    display: none;
+  }
+}
+
+/* ── Mobile: navbar layout for new items ─────────────── */
+@media (max-width: 900px) {
+  .nav-auth-group {
+    padding: var(--spacing-xs) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .nav-auth-group .btn {
+    flex: 1;
+    justify-content: center;
+    border-radius: var(--radius-md);
+  }
+
+  .nav-link--courses {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+  }
+
+  .nav-user-menu {
+    padding: var(--spacing-xs) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .user-chip__name {
+    display: block;
+  }
+}
