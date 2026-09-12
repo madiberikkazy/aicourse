@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тіркелу — Trion School</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ── Register page overrides ─────────────────────── */
+      body {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .register-page {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100dvh;
+        padding: var(--spacing-lg);
+        position: relative;
+        z-index: 1;
+      }
+
+      .register-card {
+        width: 100%;
+        max-width: 460px;
+        padding: var(--spacing-2xl);
+        border-radius: var(--radius-xl);
+        animation: fadeInUp 0.5s ease both;
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .register-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .register-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .register-title {
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.02em;
+        margin-bottom: 6px;
+      }
+
+      .register-subtitle {
+        font-size: 0.88rem;
+        color: var(--color-text-muted);
+      }
+
+      .register-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .register-form .form-group {
+        margin-bottom: var(--spacing-md);
+      }
+
+      .register-divider {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+        color: var(--color-text-dim);
+        font-size: 0.78rem;
+      }
+      .register-divider::before,
+      .register-divider::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+      }
+
+      .register-footer {
+        text-align: center;
+        margin-top: var(--spacing-lg);
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+      }
+
+      .register-footer a {
+        color: #a78bfa;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color var(--transition-fast);
+      }
+
+      .register-footer a:hover {
+        color: #c4b5fd;
+      }
+
+      .register-error {
+        font-size: 0.82rem;
+        color: #f87171;
+        margin-bottom: var(--spacing-sm);
+        min-height: 18px;
+        line-height: 1.4;
+      }
+
+      /* Back to home link */
+      .back-home {
+        position: fixed;
+        top: 20px;
+        left: 24px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--color-text-muted);
+        text-decoration: none;
+        background: var(--glass-bg);
+        border: var(--glass-border);
+        backdrop-filter: var(--glass-blur);
+        -webkit-backdrop-filter: var(--glass-blur);
+        padding: 8px 16px;
+        border-radius: var(--radius-full);
+        transition:
+          color var(--transition-fast),
+          background var(--transition-fast),
+          transform var(--transition-spring);
+        z-index: 100;
+      }
+
+      .back-home:hover {
+        color: #fff;
+        background: var(--glass-bg-strong);
+        transform: translateX(-3px);
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Background Video -->
+    <div class="video-bg-wrapper" aria-hidden="true">
+      <video class="video-bg" src="background.mp4" autoplay muted loop playsinline preload="auto"></video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <!-- Back to home -->
+    <a href="index.html" class="back-home">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Басты бет
+    </a>
+
+    <!-- Register card -->
+    <main class="register-page">
+      <div class="register-card glass-card">
+
+        <!-- Header -->
+        <div class="register-header">
+          <div class="register-logo" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 32 32" fill="none">
+              <polygon points="16,2 30,28 2,28" fill="none" stroke="url(#regLogo)" stroke-width="2.5" stroke-linejoin="round"/>
+              <circle cx="16" cy="16" r="5" fill="url(#regLogo)"/>
+              <defs>
+                <linearGradient id="regLogo" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#a78bfa"/>
+                  <stop offset="100%" stop-color="#38bdf8"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h1 class="register-title">Тіркелу</h1>
+          <p class="register-subtitle">Trion School — AI Vibecoding курсына қосылыңыз</p>
+        </div>
+
+        <!-- Google Sign-Up -->
+        <button class="btn-google" id="btnGoogleReg" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          Google арқылы тіркелу
+        </button>
+
+        <div class="register-divider"><span>немесе email арқылы</span></div>
+
+        <!-- Register form -->
+        <form id="registerForm" class="register-form" novalidate>
+
+          <div class="form-group">
+            <label for="regName" class="form-label">Аты-жөніңіз</label>
+            <input
+              type="text"
+              id="regName"
+              class="form-input glass-input"
+              placeholder="Айбол Нұрланұлы"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="regEmail" class="form-label">Email</label>
+            <input
+              type="email"
+              id="regEmail"
+              class="form-input glass-input"
+              placeholder="email@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="regPassword" class="form-label">Құпиясөз</label>
+            <div class="input-password-wrapper">
+              <input
+                type="password"
+                id="regPassword"
+                class="form-input glass-input"
+                placeholder="Кем дегенде 6 таңба"
+                required
+                minlength="6"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password" aria-label="Көрсету/жасыру" data-target="regPassword">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regPasswordConfirm" class="form-label">Құпиясөзді растау</label>
+            <div class="input-password-wrapper">
+              <input
+                type="password"
+                id="regPasswordConfirm"
+                class="form-input glass-input"
+                placeholder="••••••••"
+                required
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password" aria-label="Көрсету/жасыру" data-target="regPasswordConfirm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <p class="register-error" id="registerError" role="alert" aria-live="polite"></p>
+
+          <button type="submit" class="btn btn--primary btn--full liquid-btn" id="registerBtn">
+            <span class="btn__glow" aria-hidden="true"></span>
+            <span id="registerBtnText">Тіркелу</span>
+          </button>
+
+        </form>
+
+        <!-- Footer link -->
+        <p class="register-footer">
+          Аккаунтыңыз бар ма? <a href="index.html#signin">Кіру</a>
+        </p>
+
+      </div>
+    </main>
+
+    <!-- Password toggle -->
+    <script>
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.toggle-password');
+        if (!btn) return;
+        const input = document.getElementById(btn.dataset.target);
+        if (!input) return;
+        input.type = input.type === 'text' ? 'password' : 'text';
+      });
+    </script>
+
+    <!-- Register logic -->
+    <script type="module" src="js/register.js"></script>
+
+  </body>
+</html>
+

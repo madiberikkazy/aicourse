@@ -1993,24 +1993,6 @@
           <p class="auth-modal__subtitle" id="authModalSubtitle">Trion School — AI Vibecoding</p>
         </div>
 
-        <!-- Tabs -->
-        <div class="auth-tabs" role="tablist" aria-label="Аутентификация режимі">
-          <button
-            class="auth-tab active"
-            data-tab="signin"
-            role="tab"
-            aria-selected="true"
-            aria-controls="signInForm"
-          >Кіру</button>
-          <button
-            class="auth-tab"
-            data-tab="signup"
-            role="tab"
-            aria-selected="false"
-            aria-controls="signUpForm"
-          >Тіркелу</button>
-        </div>
-
         <!-- Google Sign-In -->
         <button class="btn-google" id="btnGoogle" type="button">
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
@@ -2024,7 +2006,7 @@
 
         <div class="auth-divider" aria-hidden="true"><span>немесе</span></div>
 
-        <!-- Sign In Form -->
+        <!-- Sign In Form (only) -->
         <form id="signInForm" class="auth-form" novalidate>
           <div class="form-group">
             <label for="siEmail" class="form-label">Email</label>
@@ -2062,75 +2044,18 @@
           </button>
         </form>
 
-        <!-- Sign Up Form -->
-        <form id="signUpForm" class="auth-form" novalidate hidden>
-          <div class="form-group">
-            <label for="suName" class="form-label">Аты-жөні <span aria-hidden="true">*</span></label>
-            <input
-              type="text"
-              id="suName"
-              name="suName"
-              class="form-input glass-input"
-              placeholder="Айбол Нұрланұлы"
-              required
-              autocomplete="name"
-            />
-          </div>
-          <div class="form-group">
-            <label for="suEmail" class="form-label">Email <span aria-hidden="true">*</span></label>
-            <input
-              type="email"
-              id="suEmail"
-              name="suEmail"
-              class="form-input glass-input"
-              placeholder="email@example.com"
-              required
-              autocomplete="email"
-            />
-          </div>
-          <div class="form-group">
-            <label for="suPassword" class="form-label">Құпиясөз <span aria-hidden="true">*</span></label>
-            <div class="input-password-wrapper">
-              <input
-                type="password"
-                id="suPassword"
-                name="suPassword"
-                class="form-input glass-input"
-                placeholder="Кем дегенде 6 таңба"
-                required
-                minlength="6"
-                autocomplete="new-password"
-              />
-              <button type="button" class="toggle-password" aria-label="Құпиясөзді көрсету/жасыру" data-target="suPassword">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
-              </button>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="suPasswordConfirm" class="form-label">Құпиясөзді растау <span aria-hidden="true">*</span></label>
-            <input
-              type="password"
-              id="suPasswordConfirm"
-              name="suPasswordConfirm"
-              class="form-input glass-input"
-              placeholder="••••••••"
-              required
-              autocomplete="new-password"
-            />
-          </div>
-          <p class="auth-error" id="signUpError" role="alert" aria-live="polite"></p>
-          <button type="submit" class="btn btn--primary btn--full liquid-btn">
-            <span class="btn__glow" aria-hidden="true"></span>
-            <span id="signUpBtnText">Тіркелу</span>
-          </button>
-        </form>
+        <!-- Link to register page -->
+        <p class="auth-modal__register-link">
+          Аккаунтыңыз жоқ па?
+          <a href="register.html">Тіркелу</a>
+        </p>
 
       </div><!-- /.auth-modal__dialog -->
     </div><!-- /#authModal -->
 
     <!-- ═══════════════════════════════════════════
        FOOTER
-  ═══════════════════════════════════════════ -->
+   ═══════════════════════════════════════════ -->
     <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer__grid">

@@ -322,7 +322,10 @@ function bootstrap() {
 
   // ── Nav buttons ──────────────────────────────────────
   document.getElementById('btnSignIn')?.addEventListener('click', () => openModal('signin'));
-  document.getElementById('btnSignUp')?.addEventListener('click', () => openModal('signup'));
+  // "Тіркелу" goes to the dedicated register page
+  document.getElementById('btnSignUp')?.addEventListener('click', () => {
+    window.location.href = 'register.html';
+  });
   document.getElementById('btnSignOut')?.addEventListener('click', handleSignOut);
   document.getElementById('navCoursesBtn')?.addEventListener('click', handleCoursesNav);
 
@@ -331,21 +334,24 @@ function bootstrap() {
   document.getElementById('authModalBackdrop')?.addEventListener('click', closeModal);
   document.addEventListener('keydown', handleModalKeydown);
 
-  // ── Tab switching ────────────────────────────────────
-  document.querySelectorAll('.auth-tab').forEach(btn => {
-    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
-  });
-
-  // ── Forms ────────────────────────────────────────────
+  // ── Sign in form only ────────────────────────────────
   document.getElementById('signInForm')?.addEventListener('submit', handleSignIn);
-  document.getElementById('signUpForm')?.addEventListener('submit', handleSignUp);
   document.getElementById('btnGoogle')?.addEventListener('click', handleGoogleSignIn);
 
-  // ── Courses locked "кіру" prompt button ──────────────
-  document.getElementById('coursesSignInPrompt')?.addEventListener('click', () => openModal('signin'));
-  document.getElementById('coursesSignUpPrompt')?.addEventListener('click', () => openModal('signup'));
+  // ── "Тіркелу" link inside modal → register page ──────
+  document.querySelector('.auth-modal__register-link a')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal();
+    setTimeout(() => { window.location.href = 'register.html'; }, 320);
+  });
 
-  // ── Mobile: update hamburger close to include auth buttons ──
+  // ── Courses locked prompt buttons ────────────────────
+  document.getElementById('coursesSignInPrompt')?.addEventListener('click', () => openModal('signin'));
+  document.getElementById('coursesSignUpPrompt')?.addEventListener('click', () => {
+    window.location.href = 'register.html';
+  });
+
+  // ── Mobile: close nav on auth button click ───────────
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
   if (hamburger && navLinks) {
