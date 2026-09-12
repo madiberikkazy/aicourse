@@ -47,11 +47,21 @@
     <header class="navbar" id="navbar" role="banner">
       <nav class="navbar__inner" aria-label="Басты навигация">
         <!-- Logo -->
-<a href="#hero" class="navbar__logo" aria-label="Trion School — Басты бетке өту">
-  <span class="logo-icon" aria-hidden="true">
-    <img src="img/logo123.png" alt="" width="24" height="24" class="logo-icon-img" />
-  </span>
-</a>
+        <a
+          href="#hero"
+          class="navbar__logo"
+          aria-label="Trion School — Басты бетке өту"
+        >
+          <span class="logo-icon" aria-hidden="true">
+            <img
+              src="img/logo123.png"
+              alt=""
+              width="24"
+              height="24"
+              class="logo-icon-img"
+            />
+          </span>
+        </a>
 
         <!-- Hamburger (mobile) -->
         <button
@@ -74,11 +84,35 @@
           <li><a href="#faq" class="nav-link">Сұрақтар</a></li>
           <!-- Protected: Курстар -->
           <li>
-            <button class="nav-link nav-link--courses" id="navCoursesBtn" aria-label="Курстар бөліміне өту">
+            <button
+              class="nav-link nav-link--courses"
+              id="navCoursesBtn"
+              aria-label="Курстар бөліміне өту"
+            >
               Курстар
-              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true" class="courses-lock-icon">
-                <rect x="3" y="6" width="8" height="6" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M5 6V4.5a2 2 0 1 1 4 0V6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 14 14"
+                fill="none"
+                aria-hidden="true"
+                class="courses-lock-icon"
+              >
+                <rect
+                  x="3"
+                  y="6"
+                  width="8"
+                  height="6"
+                  rx="1.5"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                />
+                <path
+                  d="M5 6V4.5a2 2 0 1 1 4 0V6"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                />
               </svg>
             </button>
           </li>
@@ -90,16 +124,46 @@
             </button>
           </li>
           <!-- User chip: shown when logged IN -->
-          <li class="nav-user-menu" id="userMenu" style="display:none" role="status" aria-live="polite">
+          <li
+            class="nav-user-menu"
+            id="userMenu"
+            style="display: none"
+            role="status"
+            aria-live="polite"
+          >
             <div class="user-chip">
               <div class="user-chip__avatar" aria-hidden="true">
-                <img id="userAvatarImg" src="" alt="" style="display:none" width="28" height="28"/>
+                <img
+                  id="userAvatarImg"
+                  src=""
+                  alt=""
+                  style="display: none"
+                  width="28"
+                  height="28"
+                />
                 <span id="userAvatarText">?</span>
               </div>
               <span class="user-chip__name" id="userName"></span>
-              <button class="user-chip__signout" id="btnSignOut" aria-label="Жүйеден шығу" title="Шығу">
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M6 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3M11 11l3-3-3-3M14 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <button
+                class="user-chip__signout"
+                id="btnSignOut"
+                aria-label="Жүйеден шығу"
+                title="Шығу"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3M11 11l3-3-3-3M14 8H6"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </button>
             </div>
@@ -1165,179 +1229,64 @@
           <div class="teachers-grid">
             <article
               class="teacher-card glass-card reveal"
-              aria-label="Оқытушы: Айбол Нұрланұлы"
+              aria-label="Оқытушы: Алдабай Жомарт"
             >
               <div class="teacher-card__avatar-wrapper">
                 <div
                   class="teacher-card__avatar teacher-avatar--1"
                   aria-hidden="true"
                 >
-                  <!-- AI-generated avatar placeholder -->
-                  <div class="avatar-placeholder">
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                      <circle
-                        cx="40"
-                        cy="30"
-                        r="16"
-                        fill="rgba(167,139,250,0.4)"
-                        stroke="url(#av1)"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72"
-                        fill="rgba(167,139,250,0.3)"
-                        stroke="url(#av1)"
-                        stroke-width="2"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="av1"
-                          x1="0"
-                          y1="0"
-                          x2="80"
-                          y2="80"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop offset="0%" stop-color="#a78bfa" />
-                          <stop offset="100%" stop-color="#38bdf8" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
+                  <img
+                    src="img/jomart.jpg"
+                    alt=""
+                    class="teacher-card__avatar-img"
+                  />
                   <div class="avatar-ring" aria-hidden="true"></div>
                 </div>
               </div>
               <div class="teacher-card__info">
-                <h3 class="teacher-name">Айбол Нұрланұлы</h3>
-                <span class="teacher-role"
-                  >Бас тьютор & Full-Stack Developer</span
-                >
+                <h3 class="teacher-name">Алдабай Жомарт</h3>
+                <span class="teacher-role">Дизайнер</span>
                 <p class="teacher-bio">
-                  5+ жыл тәжірибесі бар, React, Node.js, және AI интеграцияда
-                  маман. 200+ жоба жасаған.
+                  Corel, Figma, Midjourney маманы. 3+ жыл дизайнер тәжірибесі
+                  бар.
                 </p>
                 <div class="teacher-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">Node.js</span>
-                  <span class="tag">AI/ML</span>
+                  <span class="tag">Desing</span>
+                  <span class="tag">Style</span>
+                  <span class="tag">Modern</span>
                 </div>
               </div>
             </article>
 
             <article
               class="teacher-card glass-card reveal"
-              aria-label="Оқытушы: Дана Сейітқалиқызы"
+              aria-label="Оқытушы: Берікқазы Мәди"
             >
               <div class="teacher-card__avatar-wrapper">
                 <div
                   class="teacher-card__avatar teacher-avatar--2"
                   aria-hidden="true"
                 >
-                  <div class="avatar-placeholder">
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                      <circle
-                        cx="40"
-                        cy="30"
-                        r="16"
-                        fill="rgba(244,114,182,0.4)"
-                        stroke="url(#av2)"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72"
-                        fill="rgba(244,114,182,0.3)"
-                        stroke="url(#av2)"
-                        stroke-width="2"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="av2"
-                          x1="0"
-                          y1="0"
-                          x2="80"
-                          y2="80"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop offset="0%" stop-color="#f472b6" />
-                          <stop offset="100%" stop-color="#fb923c" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
+                  <img
+                    src="img/madi.png"
+                    alt=""
+                    class="teacher-card__avatar-img"
+                  />
                   <div class="avatar-ring" aria-hidden="true"></div>
                 </div>
               </div>
               <div class="teacher-card__info">
-                <h3 class="teacher-name">Дана Сейітқалиқызы</h3>
-                <span class="teacher-role"
-                  >UI/UX Дизайнер & AI Art Director</span
-                >
-                <p class="teacher-bio">
-                  Figma, Midjourney маманы. 3+ жыл балаларға дизайн үйреткен
-                  тәжірибесі бар.
-                </p>
-                <div class="teacher-tags">
-                  <span class="tag">Figma</span>
-                  <span class="tag">Midjourney</span>
-                  <span class="tag">CSS</span>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="teacher-card glass-card reveal"
-              aria-label="Оқытушы: Ерлан Жақсыбеков"
-            >
-              <div class="teacher-card__avatar-wrapper">
-                <div
-                  class="teacher-card__avatar teacher-avatar--3"
-                  aria-hidden="true"
-                >
-                  <div class="avatar-placeholder">
-                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                      <circle
-                        cx="40"
-                        cy="30"
-                        r="16"
-                        fill="rgba(52,211,153,0.4)"
-                        stroke="url(#av3)"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72"
-                        fill="rgba(52,211,153,0.3)"
-                        stroke="url(#av3)"
-                        stroke-width="2"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="av3"
-                          x1="0"
-                          y1="0"
-                          x2="80"
-                          y2="80"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop offset="0%" stop-color="#34d399" />
-                          <stop offset="100%" stop-color="#60a5fa" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div class="avatar-ring" aria-hidden="true"></div>
-                </div>
-              </div>
-              <div class="teacher-card__info">
-                <h3 class="teacher-name">Ерлан Жақсыбеков</h3>
+                <h3 class="teacher-name">Берікқазы Мәди</h3>
                 <span class="teacher-role">AI & Промпт Инженерия Тьюторы</span>
                 <p class="teacher-bio">
                   ChatGPT, Claude, Gemini API маманы. Технологиялар стартапында
                   4 жыл жұмыс тәжірибесі.
                 </p>
                 <div class="teacher-tags">
-                  <span class="tag">Prompt Eng.</span>
-                  <span class="tag">Gemini API</span>
-                  <span class="tag">Python</span>
+                  <span class="tag">AI</span>
+                  <span class="tag">Code</span>
+                  <span class="tag">Project</span>
                 </div>
               </div>
             </article>
@@ -1804,11 +1753,17 @@
       <!-- ═══════════════════════════════════════════
            COURSES SECTION (Protected)
       ═══════════════════════════════════════════ -->
-      <section class="section courses-section" id="courses" aria-labelledby="coursesTitle">
+      <section
+        class="section courses-section"
+        id="courses"
+        aria-labelledby="coursesTitle"
+      >
         <div class="container">
           <div class="section-header reveal">
             <span class="section-tag">Курстар</span>
-            <h2 class="section-title" id="coursesTitle">Менің <span class="gradient-text">Курстарым</span></h2>
+            <h2 class="section-title" id="coursesTitle">
+              Менің <span class="gradient-text">Курстарым</span>
+            </h2>
           </div>
 
           <!-- LOCKED STATE (not logged in) -->
@@ -1816,31 +1771,65 @@
             <div class="courses-locked__card glass-card">
               <div class="courses-locked__icon" aria-hidden="true">
                 <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                  <circle cx="28" cy="28" r="27" stroke="url(#lockGrad)" stroke-width="2"/>
-                  <rect x="18" y="26" width="20" height="15" rx="3" stroke="url(#lockGrad)" stroke-width="2"/>
-                  <path d="M22 26V21a6 6 0 1 1 12 0v5" stroke="url(#lockGrad)" stroke-width="2" stroke-linecap="round"/>
+                  <circle
+                    cx="28"
+                    cy="28"
+                    r="27"
+                    stroke="url(#lockGrad)"
+                    stroke-width="2"
+                  />
+                  <rect
+                    x="18"
+                    y="26"
+                    width="20"
+                    height="15"
+                    rx="3"
+                    stroke="url(#lockGrad)"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M22 26V21a6 6 0 1 1 12 0v5"
+                    stroke="url(#lockGrad)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                   <defs>
-                    <linearGradient id="lockGrad" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stop-color="#a78bfa"/>
-                      <stop offset="100%" stop-color="#38bdf8"/>
+                    <linearGradient
+                      id="lockGrad"
+                      x1="0"
+                      y1="0"
+                      x2="56"
+                      y2="56"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#a78bfa" />
+                      <stop offset="100%" stop-color="#38bdf8" />
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
               <h3>Мазмұнды көру үшін кіріңіз</h3>
-              <p>Курстарға, сабақтарға және жеке оқу жоспарыңызға қол жеткізу үшін тіркеліңіз немесе кіріңіз.</p>
+              <p>
+                Курстарға, сабақтарға және жеке оқу жоспарыңызға қол жеткізу
+                үшін тіркеліңіз немесе кіріңіз.
+              </p>
               <div class="courses-locked__actions">
-                <button class="btn btn--primary liquid-btn" id="coursesSignInPrompt">
+                <button
+                  class="btn btn--primary liquid-btn"
+                  id="coursesSignInPrompt"
+                >
                   <span class="btn__glow" aria-hidden="true"></span>
                   <span>Кіру</span>
                 </button>
-                <button class="btn btn--ghost" id="coursesSignUpPrompt">Тіркелу</button>
+                <button class="btn btn--ghost" id="coursesSignUpPrompt">
+                  Тіркелу
+                </button>
               </div>
             </div>
           </div>
 
           <!-- DASHBOARD STATE (logged in) -->
-          <div class="courses-dashboard" style="display:none">
+          <div class="courses-dashboard" style="display: none">
             <div class="dashboard-header glass-card">
               <div class="dashboard-welcome">
                 <div class="dashboard-avatar" aria-hidden="true">🎓</div>
@@ -1868,47 +1857,100 @@
             <div class="courses-grid">
               <!-- Course card 1 -->
               <article class="course-card glass-card">
-                <div class="course-card__badge course-badge--active">Белсенді</div>
+                <div class="course-card__badge course-badge--active">
+                  Белсенді
+                </div>
                 <div class="course-card__icon" aria-hidden="true">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="10" fill="url(#cc1)"/>
-                    <path d="M12 20l6 6 10-10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <defs><linearGradient id="cc1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient></defs>
+                    <rect width="40" height="40" rx="10" fill="url(#cc1)" />
+                    <path
+                      d="M12 20l6 6 10-10"
+                      stroke="white"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="cc1"
+                        x1="0"
+                        y1="0"
+                        x2="40"
+                        y2="40"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0%" stop-color="#a78bfa" />
+                        <stop offset="100%" stop-color="#38bdf8" />
+                      </linearGradient>
+                    </defs>
                   </svg>
                 </div>
                 <h3 class="course-card__title">HTML &amp; CSS Негіздері</h3>
-                <p class="course-card__desc">Веб-бет жасаудың алғашқы қадамдары</p>
+                <p class="course-card__desc">
+                  Веб-бет жасаудың алғашқы қадамдары
+                </p>
                 <div class="course-card__progress">
                   <div class="course-progress-bar">
-                    <div class="course-progress-fill" style="width:80%"></div>
+                    <div class="course-progress-fill" style="width: 80%"></div>
                   </div>
                   <span class="course-progress-label">80%</span>
                 </div>
-                <button class="btn btn--primary btn--sm liquid-btn course-card__btn">
+                <button
+                  class="btn btn--primary btn--sm liquid-btn course-card__btn"
+                >
                   <span class="btn__glow" aria-hidden="true"></span>Жалғастыру
                 </button>
               </article>
 
               <!-- Course card 2 -->
               <article class="course-card glass-card">
-                <div class="course-card__badge course-badge--active">Белсенді</div>
+                <div class="course-card__badge course-badge--active">
+                  Белсенді
+                </div>
                 <div class="course-card__icon" aria-hidden="true">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="10" fill="url(#cc2)"/>
-                    <circle cx="20" cy="20" r="8" stroke="white" stroke-width="2"/>
-                    <path d="M20 16v4l3 3" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    <defs><linearGradient id="cc2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#fb923c"/></linearGradient></defs>
+                    <rect width="40" height="40" rx="10" fill="url(#cc2)" />
+                    <circle
+                      cx="20"
+                      cy="20"
+                      r="8"
+                      stroke="white"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M20 16v4l3 3"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="cc2"
+                        x1="0"
+                        y1="0"
+                        x2="40"
+                        y2="40"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0%" stop-color="#f472b6" />
+                        <stop offset="100%" stop-color="#fb923c" />
+                      </linearGradient>
+                    </defs>
                   </svg>
                 </div>
                 <h3 class="course-card__title">AI Промпт Инженерия</h3>
-                <p class="course-card__desc">ChatGPT, Claude және Gemini пайдалану</p>
+                <p class="course-card__desc">
+                  ChatGPT, Claude және Gemini пайдалану
+                </p>
                 <div class="course-card__progress">
                   <div class="course-progress-bar">
-                    <div class="course-progress-fill" style="width:45%"></div>
+                    <div class="course-progress-fill" style="width: 45%"></div>
                   </div>
                   <span class="course-progress-label">45%</span>
                 </div>
-                <button class="btn btn--primary btn--sm liquid-btn course-card__btn">
+                <button
+                  class="btn btn--primary btn--sm liquid-btn course-card__btn"
+                >
                   <span class="btn__glow" aria-hidden="true"></span>Жалғастыру
                 </button>
               </article>
@@ -1918,20 +1960,39 @@
                 <div class="course-card__badge course-badge--new">Жаңа</div>
                 <div class="course-card__icon" aria-hidden="true">
                   <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="10" fill="url(#cc3)"/>
-                    <path d="M14 28V20a6 6 0 0 1 12 0v8M10 28h20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    <defs><linearGradient id="cc3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient></defs>
+                    <rect width="40" height="40" rx="10" fill="url(#cc3)" />
+                    <path
+                      d="M14 28V20a6 6 0 0 1 12 0v8M10 28h20"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="cc3"
+                        x1="0"
+                        y1="0"
+                        x2="40"
+                        y2="40"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0%" stop-color="#34d399" />
+                        <stop offset="100%" stop-color="#60a5fa" />
+                      </linearGradient>
+                    </defs>
                   </svg>
                 </div>
                 <h3 class="course-card__title">JavaScript &amp; Cursor IDE</h3>
                 <p class="course-card__desc">AI-бірінші бағдарламалау ортасы</p>
                 <div class="course-card__progress">
                   <div class="course-progress-bar">
-                    <div class="course-progress-fill" style="width:15%"></div>
+                    <div class="course-progress-fill" style="width: 15%"></div>
                   </div>
                   <span class="course-progress-label">15%</span>
                 </div>
-                <button class="btn btn--ghost btn--sm course-card__btn">Бастау</button>
+                <button class="btn btn--ghost btn--sm course-card__btn">
+                  Бастау
+                </button>
               </article>
 
               <!-- Add course card -->
@@ -1945,10 +2006,8 @@
               </article>
             </div>
           </div>
-
         </div>
       </section>
-
     </main>
 
     <!-- ═══════════════════════════════════════════
@@ -1963,15 +2022,29 @@
       hidden
     >
       <!-- Backdrop -->
-      <div class="auth-modal__backdrop" id="authModalBackdrop" aria-hidden="true"></div>
+      <div
+        class="auth-modal__backdrop"
+        id="authModalBackdrop"
+        aria-hidden="true"
+      ></div>
 
       <!-- Dialog -->
       <div class="auth-modal__dialog glass-card">
-
         <!-- Close -->
         <button class="auth-modal__close" id="authModalClose" aria-label="Жабу">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M5 5l10 10M15 5L5 15"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
           </svg>
         </button>
 
@@ -1979,27 +2052,80 @@
         <div class="auth-modal__header">
           <div class="auth-modal__logo" aria-hidden="true">
             <svg width="36" height="36" viewBox="0 0 32 32" fill="none">
-              <polygon points="16,2 30,28 2,28" fill="none" stroke="url(#amLogo)" stroke-width="2.5" stroke-linejoin="round"/>
-              <circle cx="16" cy="16" r="5" fill="url(#amLogo)"/>
+              <polygon
+                points="16,2 30,28 2,28"
+                fill="none"
+                stroke="url(#amLogo)"
+                stroke-width="2.5"
+                stroke-linejoin="round"
+              />
+              <circle cx="16" cy="16" r="5" fill="url(#amLogo)" />
               <defs>
-                <linearGradient id="amLogo" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#a78bfa"/>
-                  <stop offset="100%" stop-color="#38bdf8"/>
+                <linearGradient
+                  id="amLogo"
+                  x1="0"
+                  y1="0"
+                  x2="32"
+                  y2="32"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0%" stop-color="#a78bfa" />
+                  <stop offset="100%" stop-color="#38bdf8" />
                 </linearGradient>
               </defs>
             </svg>
           </div>
           <h2 class="auth-modal__title" id="authModalTitle">Жүйеге кіру</h2>
-          <p class="auth-modal__subtitle" id="authModalSubtitle">Trion School — AI Vibecoding</p>
+          <p class="auth-modal__subtitle" id="authModalSubtitle">
+            Trion School — AI Vibecoding
+          </p>
+        </div>
+
+        <!-- Tabs -->
+        <div
+          class="auth-tabs"
+          role="tablist"
+          aria-label="Аутентификация режимі"
+        >
+          <button
+            class="auth-tab active"
+            data-tab="signin"
+            role="tab"
+            aria-selected="true"
+            aria-controls="signInForm"
+          >
+            Кіру
+          </button>
+          <button
+            class="auth-tab"
+            data-tab="signup"
+            role="tab"
+            aria-selected="false"
+            aria-controls="signUpForm"
+          >
+            Тіркелу
+          </button>
         </div>
 
         <!-- Google Sign-In -->
         <button class="btn-google" id="btnGoogle" type="button">
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            <path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              fill="#4285F4"
+            />
+            <path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853"
+            />
+            <path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335"
+            />
           </svg>
           Google арқылы кіру
         </button>
@@ -2032,26 +2158,150 @@
                 required
                 autocomplete="current-password"
               />
-              <button type="button" class="toggle-password" aria-label="Құпиясөзді көрсету/жасыру" data-target="siPassword">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="Құпиясөзді көрсету/жасыру"
+                data-target="siPassword"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                </svg>
               </button>
             </div>
           </div>
-          <p class="auth-error" id="signInError" role="alert" aria-live="polite"></p>
+          <p
+            class="auth-error"
+            id="signInError"
+            role="alert"
+            aria-live="polite"
+          ></p>
           <button type="submit" class="btn btn--primary btn--full liquid-btn">
             <span class="btn__glow" aria-hidden="true"></span>
             <span id="signInBtnText">Кіру</span>
           </button>
         </form>
 
-        <!-- Link to register page -->
-        <p class="auth-modal__register-link">
-          Аккаунтыңыз жоқ па?
-          <a href="register.html">Тіркелу</a>
-        </p>
-
-      </div><!-- /.auth-modal__dialog -->
-    </div><!-- /#authModal -->
+        <!-- Sign Up Form -->
+        <form id="signUpForm" class="auth-form" novalidate hidden>
+          <div class="form-group">
+            <label for="suName" class="form-label"
+              >Аты-жөні <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="text"
+              id="suName"
+              name="suName"
+              class="form-input glass-input"
+              placeholder="Айбол Нұрланұлы"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="suEmail" class="form-label"
+              >Email <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="email"
+              id="suEmail"
+              name="suEmail"
+              class="form-input glass-input"
+              placeholder="email@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="suPassword" class="form-label"
+              >Құпиясөз <span aria-hidden="true">*</span></label
+            >
+            <div class="input-password-wrapper">
+              <input
+                type="password"
+                id="suPassword"
+                name="suPassword"
+                class="form-input glass-input"
+                placeholder="Кем дегенде 6 таңба"
+                required
+                minlength="6"
+                autocomplete="new-password"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                aria-label="Құпиясөзді көрсету/жасыру"
+                data-target="suPassword"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="suPasswordConfirm" class="form-label"
+              >Құпиясөзді растау <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="password"
+              id="suPasswordConfirm"
+              name="suPasswordConfirm"
+              class="form-input glass-input"
+              placeholder="••••••••"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+          <p
+            class="auth-error"
+            id="signUpError"
+            role="alert"
+            aria-live="polite"
+          ></p>
+          <button type="submit" class="btn btn--primary btn--full liquid-btn">
+            <span class="btn__glow" aria-hidden="true"></span>
+            <span id="signUpBtnText">Тіркелу</span>
+          </button>
+        </form>
+      </div>
+      <!-- /.auth-modal__dialog -->
+    </div>
+    <!-- /#authModal -->
 
     <!-- ═══════════════════════════════════════════
        FOOTER
@@ -2062,14 +2312,7 @@
           <div class="footer__brand">
             <a href="#hero" class="navbar__logo" aria-label="Trion School">
               <span class="logo-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                  <polygon
-                    points="16,2 30,28 2,28"
-                    fill="none"
-                    stroke="url(#fLogoGrad)"
-                    stroke-width="2.5"
-                    stroke-linejoin="round"
-                  />
+                
                   <circle cx="16" cy="16" r="5" fill="url(#fLogoGrad)" />
                   <defs>
                     <linearGradient
@@ -2086,7 +2329,17 @@
                   </defs>
                 </svg>
               </span>
-              <span class="logo-text">Trion <strong>School</strong></span>
+              <a href="#hero" class="navbar__logo" aria-label="Trion School">
+                <span class="logo-icon" aria-hidden="true">
+                  <img
+                    src="img/logo123.png"
+                    alt=""
+                    width="28"
+                    height="28"
+                    class="logo-icon-img"
+                  />
+                </span>
+              </a>
             </a>
             <p>
               Балаларға арналған AI бағдарламалау мектебі. Болашақты бірге
@@ -2165,14 +2418,17 @@
     <script type="module" src="js/auth.js"></script>
     <!-- Inline password-toggle (no module needed) -->
     <script>
-      document.addEventListener('click', (e) => {
-        const btn = e.target.closest('.toggle-password');
+      document.addEventListener("click", (e) => {
+        const btn = e.target.closest(".toggle-password");
         if (!btn) return;
         const input = document.getElementById(btn.dataset.target);
         if (!input) return;
-        const isText = input.type === 'text';
-        input.type = isText ? 'password' : 'text';
-        btn.setAttribute('aria-label', isText ? 'Құпиясөзді көрсету' : 'Құпиясөзді жасыру');
+        const isText = input.type === "text";
+        input.type = isText ? "password" : "text";
+        btn.setAttribute(
+          "aria-label",
+          isText ? "Құпиясөзді көрсету" : "Құпиясөзді жасыру",
+        );
       });
     </script>
     <script src="js/main.js" defer></script>
@@ -2180,4 +2436,3 @@
     <script src="js/animations.js" defer></script>
   </body>
 </html>
-
