@@ -1,938 +1,1891 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="kk">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Trion School - AI Vibecoding курсы. Балаларға жасанды интеллект арқылы бағдарламалауды үйрету." />
-  <title>AI Vibecoding Course — Trion School</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trion School - AI Vibecoding курсы. Балаларға жасанды интеллект арқылы бағдарламалауды үйрету."
+    />
+    <title>AI Vibecoding Course — Trion School</title>
 
-  <!-- Preload critical assets -->
-  <link rel="preload" href="css/styles.css" as="style" />
-  <link rel="preload" href="css/animations.css" as="style" />
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/styles.css" as="style" />
+    <link rel="preload" href="css/animations.css" as="style" />
 
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animations.css" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-
-  <!-- ═══════════════════════════════════════════
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════
        BACKGROUND VIDEO
   ═══════════════════════════════════════════ -->
-  <div class="video-bg-wrapper" aria-hidden="true">
-    <video
-      class="video-bg"
-      src="background.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-    ></video>
-    <div class="video-overlay"></div>
-  </div>
+    <div class="video-bg-wrapper" aria-hidden="true">
+      <video
+        class="video-bg"
+        src="background.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+      <div class="video-overlay"></div>
+    </div>
 
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        STICKY FLOATING NAV BAR
   ═══════════════════════════════════════════ -->
-  <header class="navbar" id="navbar" role="banner">
-    <nav class="navbar__inner" aria-label="Басты навигация">
-      <!-- Logo -->
-      <a href="#hero" class="navbar__logo" aria-label="Trion School — Басты бетке өту">
-        <span class="logo-icon" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="16,2 30,28 2,28" fill="none" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="16" cy="16" r="5" fill="url(#logoGrad)"/>
-            <defs>
-              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#a78bfa"/>
-                <stop offset="100%" stop-color="#38bdf8"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-        <span class="logo-text">Trion <strong>School</strong></span>
-      </a>
+    <header class="navbar" id="navbar" role="banner">
+      <nav class="navbar__inner" aria-label="Басты навигация">
+        <!-- Logo -->
+<a href="#hero" class="navbar__logo" aria-label="Trion School — Басты бетке өту">
+  <span class="logo-icon" aria-hidden="true">
+    <img src="img/logo123.png" alt="" width="24" height="24" class="logo-icon-img" />
+  </span>
+</a>
 
-      <!-- Hamburger (mobile) -->
-      <button class="navbar__hamburger" id="hamburger" aria-label="Мәзірді ашу/жабу" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
+        <!-- Hamburger (mobile) -->
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Мәзірді ашу/жабу"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
 
-      <!-- Nav Links -->
-      <ul class="navbar__links" id="navLinks" role="list">
-        <li><a href="#about" class="nav-link">Ақпарат</a></li>
-        <li><a href="#roadmap" class="nav-link">Жол картасы</a></li>
-        <li><a href="#tools" class="nav-link">Құралдар</a></li>
-        <li><a href="#syllabus" class="nav-link">Бағдарлама</a></li>
-        <li><a href="#teachers" class="nav-link">Оқытушылар</a></li>
-        <li><a href="#faq" class="nav-link">Сұрақтар</a></li>
-        <li>
-          <a href="#contact" class="nav-link nav-link--cta">
-            <span>Қосылу</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+        <!-- Nav Links -->
+        <ul class="navbar__links" id="navLinks" role="list">
+          <li><a href="#about" class="nav-link">Ақпарат</a></li>
+          <li><a href="#roadmap" class="nav-link">Жол картасы</a></li>
+          <li><a href="#tools" class="nav-link">Құралдар</a></li>
+          <li><a href="#syllabus" class="nav-link">Бағдарлама</a></li>
+          <li><a href="#teachers" class="nav-link">Оқытушылар</a></li>
+          <li><a href="#faq" class="nav-link">Сұрақтар</a></li>
+          <li>
+            <a href="#contact" class="nav-link nav-link--cta">
+              <span>Қосылу</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <main id="main-content">
-
-    <!-- ═══════════════════════════════════════════
+    <main id="main-content">
+      <!-- ═══════════════════════════════════════════
          HERO SECTION
     ═══════════════════════════════════════════ -->
-    <section class="hero" id="hero" aria-labelledby="heroTitle">
-      <div class="hero__particles" aria-hidden="true" id="particles"></div>
+      <section class="hero" id="hero" aria-labelledby="heroTitle">
+        <div class="hero__particles" aria-hidden="true" id="particles"></div>
 
-      <div class="hero__content glass-card animate-fadein">
-        <div class="hero__badge animate-slidein-delay-1">
-          <span class="badge-dot"></span>
-          Trion School тарапынан
-        </div>
-
-        <h1 class="hero__title animate-slidein-delay-2" id="heroTitle">
-          <span class="gradient-text">AI Vibecoding</span><br />
-          Курсы
-        </h1>
-
-        <p class="hero__subtitle animate-slidein-delay-3">
-          Балаларыңызды болашаққа дайындаңыз — жасанды интеллект арқылы бағдарламалауды үйрету платформасы.
-          Ойнай отырып жасаңыз, жасай отырып үйреніңіз.
-        </p>
-
-        <div class="hero__actions animate-slidein-delay-4">
-          <a href="#contact" class="btn btn--primary liquid-btn">
-            <span class="btn__glow" aria-hidden="true"></span>
-            <span class="btn__text">Қазір Қосылу</span>
-            <svg class="btn__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="#roadmap" class="btn btn--ghost">
-            <span>Жол картасын көру</span>
-          </a>
-        </div>
-
-        <div class="hero__stats animate-slidein-delay-5">
-          <div class="stat-item">
-            <span class="stat-number" data-target="500">0</span>
-            <span class="stat-plus">+</span>
-            <span class="stat-label">Оқушы</span>
+        <div class="hero__content glass-card animate-fadein">
+          <div class="hero__badge animate-slidein-delay-1">
+            <span class="badge-dot"></span>
+            Trion School тарапынан
           </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="12">0</span>
-            <span class="stat-label">Модуль</span>
+
+          <h1 class="hero__title animate-slidein-delay-2" id="heroTitle">
+            <span class="gradient-text">AI Vibecoding</span><br />
+            Курсы
+          </h1>
+
+          <p class="hero__subtitle animate-slidein-delay-3">
+            Балаларыңызды болашаққа дайындаңыз — жасанды интеллект арқылы
+            бағдарламалауды үйрету платформасы. Ойнай отырып жасаңыз, жасай
+            отырып үйреніңіз.
+          </p>
+
+          <div class="hero__actions animate-slidein-delay-4">
+            <a href="#contact" class="btn btn--primary liquid-btn">
+              <span class="btn__glow" aria-hidden="true"></span>
+              <span class="btn__text">Қазір Қосылу</span>
+              <svg
+                class="btn__arrow"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 10h12M10 4l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a href="#roadmap" class="btn btn--ghost">
+              <span>Жол картасын көру</span>
+            </a>
           </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="95">0</span>
-            <span class="stat-plus">%</span>
-            <span class="stat-label">Нәтиже</span>
+
+          <div class="hero__stats animate-slidein-delay-5">
+            <div class="stat-item">
+              <span class="stat-number" data-target="500">0</span>
+              <span class="stat-plus">+</span>
+              <span class="stat-label">Оқушы</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="12">0</span>
+              <span class="stat-label">Модуль</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="95">0</span>
+              <span class="stat-plus">%</span>
+              <span class="stat-label">Нәтиже</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="hero__scroll-indicator animate-fadein-delay-6" aria-hidden="true">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
+        <div
+          class="hero__scroll-indicator animate-fadein-delay-6"
+          aria-hidden="true"
+        >
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span>Төмен жылжыңыз</span>
         </div>
-        <span>Төмен жылжыңыз</span>
-      </div>
-    </section>
+      </section>
 
-    <!-- ═══════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════
          ABOUT / INFO SECTION
     ═══════════════════════════════════════════ -->
-    <section class="section about-section" id="about" aria-labelledby="aboutTitle">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Ақпарат</span>
-          <h2 class="section-title" id="aboutTitle">Неліктен <span class="gradient-text">AI Vibecoding?</span></h2>
-          <p class="section-desc">Vibecoding — бұл жасанды интеллектпен бірге ойлап, бірге жазатын жаңа буын бағдарламалау тәсілі.</p>
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="aboutTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Ақпарат</span>
+            <h2 class="section-title" id="aboutTitle">
+              Неліктен <span class="gradient-text">AI Vibecoding?</span>
+            </h2>
+            <p class="section-desc">
+              Vibecoding — бұл жасанды интеллектпен бірге ойлап, бірге жазатын
+              жаңа буын бағдарламалау тәсілі.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card glass-card reveal reveal-left">
+              <div class="about-card__icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="18"
+                    stroke="url(#g1)"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M13 20l5 5 9-9"
+                    stroke="url(#g1)"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="g1"
+                      x1="0"
+                      y1="0"
+                      x2="40"
+                      y2="40"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#a78bfa" />
+                      <stop offset="100%" stop-color="#38bdf8" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3>Практикалық үйрену</h3>
+              <p>
+                Теориядан емес, тікелей жобадан бастаймыз. Балалар бірінші
+                сабақтан бастап нақты нәрселер жасайды.
+              </p>
+            </div>
+
+            <div class="about-card glass-card reveal">
+              <div class="about-card__icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="18"
+                    stroke="url(#g2)"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M20 12v8l5 3"
+                    stroke="url(#g2)"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="g2"
+                      x1="0"
+                      y1="0"
+                      x2="40"
+                      y2="40"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#f472b6" />
+                      <stop offset="100%" stop-color="#fb923c" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3>Жасанды интеллект күші</h3>
+              <p>
+                ChatGPT, Claude сияқты AI құралдарын пайдаланып, бағдарламалауды
+                жеңіл және қызықты ету.
+              </p>
+            </div>
+
+            <div class="about-card glass-card reveal reveal-right">
+              <div class="about-card__icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="18"
+                    stroke="url(#g3)"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M15 20 Q20 14 25 20 Q20 26 15 20Z"
+                    stroke="url(#g3)"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="g3"
+                      x1="0"
+                      y1="0"
+                      x2="40"
+                      y2="40"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#34d399" />
+                      <stop offset="100%" stop-color="#60a5fa" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3>Шығармашылық ойлау</h3>
+              <p>
+                Техникалық дағдылармен қатар, балалардың шығармашылық және сыни
+                ойлауын дамытамыз.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="about-grid">
-          <div class="about-card glass-card reveal reveal-left">
-            <div class="about-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="url(#g1)" stroke-width="2"/><path d="M13 20l5 5 9-9" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient></defs></svg>
-            </div>
-            <h3>Практикалық үйрену</h3>
-            <p>Теориядан емес, тікелей жобадан бастаймыз. Балалар бірінші сабақтан бастап нақты нәрселер жасайды.</p>
-          </div>
-
-          <div class="about-card glass-card reveal">
-            <div class="about-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="url(#g2)" stroke-width="2"/><path d="M20 12v8l5 3" stroke="url(#g2)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="g2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#fb923c"/></linearGradient></defs></svg>
-            </div>
-            <h3>Жасанды интеллект күші</h3>
-            <p>ChatGPT, Claude сияқты AI құралдарын пайдаланып, бағдарламалауды жеңіл және қызықты ету.</p>
-          </div>
-
-          <div class="about-card glass-card reveal reveal-right">
-            <div class="about-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="url(#g3)" stroke-width="2"/><path d="M15 20 Q20 14 25 20 Q20 26 15 20Z" stroke="url(#g3)" stroke-width="2" fill="none"/><defs><linearGradient id="g3" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient></defs></svg>
-            </div>
-            <h3>Шығармашылық ойлау</h3>
-            <p>Техникалық дағдылармен қатар, балалардың шығармашылық және сыни ойлауын дамытамыз.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════
          ROADMAP SECTION
     ═══════════════════════════════════════════ -->
-    <section class="section roadmap-section" id="roadmap" aria-labelledby="roadmapTitle">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Жол картасы</span>
-          <h2 class="section-title" id="roadmapTitle">Нәтижеге апарар <span class="gradient-text">Жол</span></h2>
-          <p class="section-desc">Нөлден бастап өзіңіздің AI қосымшаңызды жасауға дейін — кезең-кезеңімен.</p>
+      <section
+        class="section roadmap-section"
+        id="roadmap"
+        aria-labelledby="roadmapTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Жол картасы</span>
+            <h2 class="section-title" id="roadmapTitle">
+              Нәтижеге апарар <span class="gradient-text">Жол</span>
+            </h2>
+            <p class="section-desc">
+              Нөлден бастап өзіңіздің AI қосымшаңызды жасауға дейін —
+              кезең-кезеңімен.
+            </p>
+          </div>
+
+          <div class="timeline" role="list">
+            <div class="timeline-item reveal" role="listitem">
+              <div class="timeline-marker" aria-hidden="true">
+                <span class="timeline-step">01</span>
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-card glass-card">
+                <button
+                  class="timeline-card__toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="roadmap-panel-1"
+                  id="roadmap-toggle-1"
+                >
+                  <div class="timeline-card__header">
+                    <span class="timeline-tag">Апта 1–2</span>
+                    <h3>Негіздер</h3>
+                  </div>
+                  <span class="timeline-card__chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M5 8l5 5 5-5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <p class="timeline-card__summary">
+                  Интернет, компьютер және бағдарламалаудың не екенін түсіну.
+                  AI-мен алғашқы сөйлесу.
+                </p>
+
+                <div
+                  class="timeline-card__panel"
+                  id="roadmap-panel-1"
+                  role="region"
+                  aria-labelledby="roadmap-toggle-1"
+                >
+                  <div class="timeline-card__panel-inner">
+                    <ul class="timeline-skills">
+                      <li>HTML & CSS негіздері</li>
+                      <li>ChatGPT пен жұмыс</li>
+                      <li>Алғашқы веб-бет</li>
+                    </ul>
+                    <p class="timeline-card__extra">
+                      Бұл кезеңде бала интернеттің қалай жұмыс істейтінін,
+                      браузер мен серверлердің байланысын түсінеді. Алғашқы HTML
+                      тегтерін жазып, өз атынан жасалған қарапайым веб-бетті
+                      шығарады. Сабақ соңында әр оқушы ChatGPT-пен диалог құрып,
+                      қарапайым сұрақтарға жауап алуды үйренеді.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-right" role="listitem">
+              <div class="timeline-marker" aria-hidden="true">
+                <span class="timeline-step">02</span>
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-card glass-card">
+                <button
+                  class="timeline-card__toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="roadmap-panel-2"
+                  id="roadmap-toggle-2"
+                >
+                  <div class="timeline-card__header">
+                    <span class="timeline-tag">Апта 3–4</span>
+                    <h3>Cursor IDE</h3>
+                  </div>
+                  <span class="timeline-card__chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M5 8l5 5 5-5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <p class="timeline-card__summary">
+                  Cursor IDE-мен таныстыру. AI-ға тапсырма беру және код
+                  жаздыру.
+                </p>
+
+                <div
+                  class="timeline-card__panel"
+                  id="roadmap-panel-2"
+                  role="region"
+                  aria-labelledby="roadmap-toggle-2"
+                >
+                  <div class="timeline-card__panel-inner">
+                    <ul class="timeline-skills">
+                      <li>Cursor орнату</li>
+                      <li>Промпт жазу өнері</li>
+                      <li>Алғашқы JS қосымша</li>
+                    </ul>
+                    <p class="timeline-card__extra">
+                      Оқушылар Cursor IDE-ні өз компьютерлеріне орнатып, алғашқы
+                      AI-көмегімен жазылған қолданбаны құрастырады. Промпт жазу
+                      дағдысы дамиды: нақты тапсырма қалай тұжырымдалады, AI-дан
+                      қандай нәтиже күтуге болатынын үйренеді. Модуль соңында әр
+                      бала JavaScript-те жұмыс істейтін шағын интерактивті
+                      виджет жасайды.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal" role="listitem">
+              <div class="timeline-marker" aria-hidden="true">
+                <span class="timeline-step">03</span>
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-card glass-card">
+                <button
+                  class="timeline-card__toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="roadmap-panel-3"
+                  id="roadmap-toggle-3"
+                >
+                  <div class="timeline-card__header">
+                    <span class="timeline-tag">Апта 5–6</span>
+                    <h3>UI/UX Дизайн</h3>
+                  </div>
+                  <span class="timeline-card__chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M5 8l5 5 5-5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <p class="timeline-card__summary">
+                  Midjourney арқылы AI суреттер жасау, сайттарды әдемі ету.
+                </p>
+
+                <div
+                  class="timeline-card__panel"
+                  id="roadmap-panel-3"
+                  role="region"
+                  aria-labelledby="roadmap-toggle-3"
+                >
+                  <div class="timeline-card__panel-inner">
+                    <ul class="timeline-skills">
+                      <li>Figma негіздері</li>
+                      <li>Midjourney промпттары</li>
+                      <li>Адаптивті дизайн</li>
+                    </ul>
+                    <p class="timeline-card__extra">
+                      Figma-да фреймдер мен компоненттермен жұмыс істеу
+                      үйретіледі, ал Midjourney арқылы бала өз жобасына арналған
+                      иллюстрациялар мен иконкалар жасайды. Түстер палитрасы,
+                      типографика және композиция негіздері беріледі.
+                      Нәтижесінде әр оқушы өз сайтының толық дизайн-макетін
+                      дайындайды.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-item reveal reveal-right" role="listitem">
+              <div class="timeline-marker" aria-hidden="true">
+                <span class="timeline-step">04</span>
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-card glass-card">
+                <button
+                  class="timeline-card__toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="roadmap-panel-4"
+                  id="roadmap-toggle-4"
+                >
+                  <div class="timeline-card__header">
+                    <span class="timeline-tag">Апта 7–8</span>
+                    <h3>Backend & AI API</h3>
+                  </div>
+                  <span class="timeline-card__chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M5 8l5 5 5-5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <p class="timeline-card__summary">
+                  Node.js және Gemini API пайдаланып, деректермен жұмыс жасайтын
+                  қосымша жасау.
+                </p>
+
+                <div
+                  class="timeline-card__panel"
+                  id="roadmap-panel-4"
+                  role="region"
+                  aria-labelledby="roadmap-toggle-4"
+                >
+                  <div class="timeline-card__panel-inner">
+                    <ul class="timeline-skills">
+                      <li>API дегеніміз не?</li>
+                      <li>Gemini API интеграция</li>
+                      <li>Дерекқор негіздері</li>
+                    </ul>
+                    <p class="timeline-card__extra">
+                      Node.js көмегімен сервер жағының қалай жұмыс істейтінін
+                      түсінеді, ал Gemini API интеграциясы арқылы AI жауап
+                      беретін чат-бот немесе көмекші құрады. JSON форматымен,
+                      fetch сұраныстарымен және async/await синтаксисімен
+                      танысады. Бұл кезең — бала алғаш рет клиент пен сервер
+                      арасындағы толық байланысты өз көзімен көреді.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal" role="listitem">
+              <div class="timeline-marker" aria-hidden="true">
+                <span class="timeline-step">05</span>
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-card glass-card">
+                <button
+                  class="timeline-card__toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="roadmap-panel-5"
+                  id="roadmap-toggle-5"
+                >
+                  <div class="timeline-card__header">
+                    <span class="timeline-tag">Апта 9–10</span>
+                    <h3>Толыққанды Жоба</h3>
+                  </div>
+                  <span class="timeline-card__chevron" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M5 8l5 5 5-5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <p class="timeline-card__summary">
+                  Бастан аяқ өзіндік AI қосымшасын жасау және интернетке
+                  орналастыру.
+                </p>
+
+                <div
+                  class="timeline-card__panel"
+                  id="roadmap-panel-5"
+                  role="region"
+                  aria-labelledby="roadmap-toggle-5"
+                >
+                  <div class="timeline-card__panel-inner">
+                    <ul class="timeline-skills">
+                      <li>Full-stack жоба</li>
+                      <li>Deployment (Vercel)</li>
+                      <li>Портфолио</li>
+                    </ul>
+                    <p class="timeline-card__extra">
+                      Оқушы идеядан бастап дайын өнімге дейінгі жолды толық өз
+                      бетінше өтеді: жобаны жоспарлау, интерфейс салу, backend
+                      қосу және Vercel платформасына жүктеу. Тьюторлар жеке
+                      кеңес беріп, кодты тексереді. Курс соңында әр бала
+                      портфолиосына қосатын жұмыс істейтін AI қосымшасымен
+                      шығады.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <
+            <div class="timeline-item reveal reveal-right" role="listitem">
+              <div class="timeline-marker" aria-hidden="true">
+                <span class="timeline-step">🎓</span>
+                <div class="timeline-dot timeline-dot--final"></div>
+              </div>
+              <div class="timeline-card glass-card timeline-card--final">
+                <div
+                  class="timeline-card__header"
+                  style="padding: var(--spacing-lg) var(--spacing-lg) 0"
+                >
+                  <span class="timeline-tag timeline-tag--gold">Түлек</span>
+                  <h3>Сен — AI-Бағдарламашысың!</h3>
+                </div>
+                <p class="timeline-card__summary">
+                  Меніңкі деп айта алатын AI қосымшамен, сертификатпен және
+                  болашаққа дайын дағдылармен шығасың!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="timeline" role="list">
-          <div class="timeline-item reveal" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-step">01</span>
-              <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-card glass-card">
-              <div class="timeline-card__header">
-                <span class="timeline-tag">Апта 1–2</span>
-                <h3>Негіздер</h3>
-              </div>
-              <p>Интернет, компьютер және бағдарламалаудың не екенін түсіну. AI-мен алғашқы сөйлесу.</p>
-              <ul class="timeline-skills">
-                <li>HTML & CSS негіздері</li>
-                <li>ChatGPT пен жұмыс</li>
-                <li>Алғашқы веб-бет</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-right" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-step">02</span>
-              <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-card glass-card">
-              <div class="timeline-card__header">
-                <span class="timeline-tag">Апта 3–4</span>
-                <h3>Cursor IDE</h3>
-              </div>
-              <p>Cursor IDE-мен таныстыру. AI-ға тапсырма беру және код жаздыру.</p>
-              <ul class="timeline-skills">
-                <li>Cursor орнату</li>
-                <li>Промпт жазу өнері</li>
-                <li>Алғашқы JS қосымша</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-step">03</span>
-              <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-card glass-card">
-              <div class="timeline-card__header">
-                <span class="timeline-tag">Апта 5–6</span>
-                <h3>UI/UX Дизайн</h3>
-              </div>
-              <p>Midjourney арқылы AI суреттер жасау, сайттарды әдемі ету.</p>
-              <ul class="timeline-skills">
-                <li>Figma негіздері</li>
-                <li>Midjourney промпттары</li>
-                <li>Адаптивті дизайн</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-right" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-step">04</span>
-              <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-card glass-card">
-              <div class="timeline-card__header">
-                <span class="timeline-tag">Апта 7–8</span>
-                <h3>Backend & AI API</h3>
-              </div>
-              <p>Node.js және Gemini API пайдаланып, деректермен жұмыс жасайтын қосымша жасау.</p>
-              <ul class="timeline-skills">
-                <li>API дегеніміз не?</li>
-                <li>Gemini API интеграция</li>
-                <li>Дерекқор негіздері</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-step">05</span>
-              <div class="timeline-dot"></div>
-            </div>
-            <div class="timeline-card glass-card">
-              <div class="timeline-card__header">
-                <span class="timeline-tag">Апта 9–10</span>
-                <h3>Толыққанды Жоба</h3>
-              </div>
-              <p>Бастан аяқ өзіндік AI қосымшасын жасау және интернетке орналастыру.</p>
-              <ul class="timeline-skills">
-                <li>Full-stack жоба</li>
-                <li>Deployment (Vercel)</li>
-                <li>Портфолио</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal reveal-right" role="listitem">
-            <div class="timeline-marker" aria-hidden="true">
-              <span class="timeline-step">🎓</span>
-              <div class="timeline-dot timeline-dot--final"></div>
-            </div>
-            <div class="timeline-card glass-card timeline-card--final">
-              <div class="timeline-card__header">
-                <span class="timeline-tag timeline-tag--gold">Түлек</span>
-                <h3>Сен — AI-Бағдарламашысың!</h3>
-              </div>
-              <p>Меніңкі деп айта алатын AI қосымшамен, сертификатпен және болашаққа дайын дағдылармен шығасың!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════
          TOOLS SECTION
     ═══════════════════════════════════════════ -->
-    <section class="section tools-section" id="tools" aria-labelledby="toolsTitle">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Құралдар</span>
-          <h2 class="section-title" id="toolsTitle">Не <span class="gradient-text">Үйренесің?</span></h2>
-          <p class="section-desc">Ең заманауи AI және бағдарламалау құралдарымен жұмыс жасауды меңгересің.</p>
+      <section
+        class="section tools-section"
+        id="tools"
+        aria-labelledby="toolsTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Құралдар</span>
+            <h2 class="section-title" id="toolsTitle">
+              Не <span class="gradient-text">Үйренесің?</span>
+            </h2>
+            <p class="section-desc">
+              Ең заманауи AI және бағдарламалау құралдарымен жұмыс жасауды
+              меңгересің.
+            </p>
+          </div>
+
+          <div class="tools-grid">
+            <div class="tool-card glass-card reveal" data-delay="0">
+              <div
+                class="tool-card__icon tool-icon--cursor"
+                aria-label="Cursor IDE логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg1)" />
+                  <path
+                    d="M24 8 L40 24 L24 40 L8 24 Z"
+                    stroke="white"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <circle cx="24" cy="24" r="4" fill="white" />
+                  <defs>
+                    <linearGradient
+                      id="cg1"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#1a1a2e" />
+                      <stop offset="100%" stop-color="#16213e" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">Cursor IDE</h3>
+              <p class="tool-card__desc">AI-бірінші код редакторы</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 90%"></div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card reveal" data-delay="1">
+              <div
+                class="tool-card__icon tool-icon--chatgpt"
+                aria-label="ChatGPT логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg2)" />
+                  <path
+                    d="M24 12 C30 12 36 18 36 24 C36 30 30 36 24 36 C21 36 18 34.5 16 32 L12 34 L14 30 C12 28 12 26 12 24 C12 18 18 12 24 12Z"
+                    stroke="white"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="cg2"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#10a37f" />
+                      <stop offset="100%" stop-color="#1a7f64" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">ChatGPT</h3>
+              <p class="tool-card__desc">OpenAI тілдік үлгісі</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 95%"></div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card reveal" data-delay="2">
+              <div
+                class="tool-card__icon tool-icon--claude"
+                aria-label="Claude логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg3)" />
+                  <ellipse
+                    cx="24"
+                    cy="22"
+                    rx="10"
+                    ry="12"
+                    stroke="white"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M18 34 Q24 38 30 34"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    fill="none"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="cg3"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#cc785c" />
+                      <stop offset="100%" stop-color="#a05a3f" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">Claude</h3>
+              <p class="tool-card__desc">Anthropic AI көмекшісі</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 88%"></div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card reveal" data-delay="3">
+              <div
+                class="tool-card__icon tool-icon--midjourney"
+                aria-label="Midjourney логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg4)" />
+                  <path
+                    d="M16 36 L24 16 L32 36"
+                    stroke="white"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                  <path
+                    d="M19 28 H29"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="cg4"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#1a1a1a" />
+                      <stop offset="100%" stop-color="#333" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">Midjourney</h3>
+              <p class="tool-card__desc">AI сурет генераторы</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 80%"></div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card reveal" data-delay="4">
+              <div
+                class="tool-card__icon tool-icon--figma"
+                aria-label="Figma логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg5)" />
+                  <circle
+                    cx="28"
+                    cy="24"
+                    r="6"
+                    stroke="#a78bfa"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <rect
+                    x="16"
+                    y="12"
+                    width="12"
+                    height="12"
+                    rx="6"
+                    stroke="white"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <rect
+                    x="16"
+                    y="24"
+                    width="12"
+                    height="12"
+                    rx="0 0 6 6"
+                    stroke="#f472b6"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="cg5"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#1e1b2e" />
+                      <stop offset="100%" stop-color="#2d2a40" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">Figma</h3>
+              <p class="tool-card__desc">UI/UX дизайн платформасы</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 75%"></div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card reveal" data-delay="5">
+              <div
+                class="tool-card__icon tool-icon--gemini"
+                aria-label="Gemini логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg6)" />
+                  <path
+                    d="M24 8 C24 8 32 20 32 24 C32 28 24 40 24 40 C24 40 16 28 16 24 C16 20 24 8 24 8Z"
+                    stroke="url(#cg6b)"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M8 24 C8 24 20 16 24 16 C28 16 40 24 40 24 C40 24 28 32 24 32 C20 32 8 24 8 24Z"
+                    stroke="url(#cg6c)"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="cg6"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#1a1a3e" />
+                      <stop offset="100%" stop-color="#0f0f2e" />
+                    </linearGradient>
+                    <linearGradient
+                      id="cg6b"
+                      x1="24"
+                      y1="8"
+                      x2="24"
+                      y2="40"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#a78bfa" />
+                      <stop offset="100%" stop-color="#38bdf8" />
+                    </linearGradient>
+                    <linearGradient
+                      id="cg6c"
+                      x1="8"
+                      y1="24"
+                      x2="40"
+                      y2="24"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#f472b6" />
+                      <stop offset="100%" stop-color="#fb923c" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">Gemini API</h3>
+              <p class="tool-card__desc">Google AI интеграция</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 85%"></div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card reveal" data-delay="6">
+              <div
+                class="tool-card__icon tool-icon--vercel"
+                aria-label="Vercel логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg7)" />
+                  <path d="M24 14 L38 36 H10 Z" fill="white" />
+                  <defs>
+                    <linearGradient
+                      id="cg7"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#111" />
+                      <stop offset="100%" stop-color="#222" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">Vercel</h3>
+              <p class="tool-card__desc">Жылдам деплой платформасы</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 78%"></div>
+              </div>
+            </div>
+
+            <div class="tool-card glass-card reveal" data-delay="7">
+              <div
+                class="tool-card__icon tool-icon--github"
+                aria-label="GitHub логотипі"
+              >
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <rect width="48" height="48" rx="12" fill="url(#cg8)" />
+                  <path
+                    d="M24 10 C16.27 10 10 16.27 10 24 C10 30.19 14.15 35.43 19.78 37.29 C20.48 37.42 20.73 37 20.73 36.63 C20.73 36.29 20.72 35.42 20.71 34.26 C17.26 35.09 16.45 32.73 16.45 32.73 C15.81 31.1 14.89 30.67 14.89 30.67 C13.64 29.84 14.98 29.85 14.98 29.85 C16.36 29.95 17.08 31.26 17.08 31.26 C18.31 33.41 20.33 32.8 20.76 32.45 C20.88 31.59 21.22 31.01 21.6 30.69 C18.89 30.37 16.03 29.33 16.03 24.69 C16.03 23.13 16.58 21.86 17.51 20.87 C17.37 20.54 16.89 19.1 17.64 17.15 C17.64 17.15 18.81 16.8 20.71 18.07 C21.54 17.83 22.41 17.71 23.29 17.71 C24.16 17.71 25.04 17.84 25.86 18.07 C27.77 16.8 28.93 17.15 28.93 17.15 C29.68 19.1 29.2 20.54 29.06 20.87 C29.99 21.86 30.54 23.13 30.54 24.69 C30.54 29.35 27.68 30.37 24.95 30.69 C25.43 31.07 25.86 31.85 25.86 33.04 C25.86 34.74 25.84 36.1 25.84 36.63 C25.84 37.02 26.08 37.44 26.8 37.3 C32.42 35.43 36.57 30.18 36.57 24 C36.57 16.27 30.3 10 22.57 10 L24 10Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="cg8"
+                      x1="0"
+                      y1="0"
+                      x2="48"
+                      y2="48"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#24292e" />
+                      <stop offset="100%" stop-color="#1a1e22" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="tool-card__name">GitHub</h3>
+              <p class="tool-card__desc">Нұсқаларды басқару жүйесі</p>
+              <div class="tool-card__level">
+                <div class="level-bar" style="--level: 82%"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="tools-grid">
-          <div class="tool-card glass-card reveal" data-delay="0">
-            <div class="tool-card__icon tool-icon--cursor" aria-label="Cursor IDE логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg1)"/>
-                <path d="M24 8 L40 24 L24 40 L8 24 Z" stroke="white" stroke-width="2" fill="none"/>
-                <circle cx="24" cy="24" r="4" fill="white"/>
-                <defs><linearGradient id="cg1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#16213e"/></linearGradient></defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">Cursor IDE</h3>
-            <p class="tool-card__desc">AI-бірінші код редакторы</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 90%"></div>
-            </div>
-          </div>
-
-          <div class="tool-card glass-card reveal" data-delay="1">
-            <div class="tool-card__icon tool-icon--chatgpt" aria-label="ChatGPT логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg2)"/>
-                <path d="M24 12 C30 12 36 18 36 24 C36 30 30 36 24 36 C21 36 18 34.5 16 32 L12 34 L14 30 C12 28 12 26 12 24 C12 18 18 12 24 12Z" stroke="white" stroke-width="2" fill="none"/>
-                <defs><linearGradient id="cg2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#10a37f"/><stop offset="100%" stop-color="#1a7f64"/></linearGradient></defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">ChatGPT</h3>
-            <p class="tool-card__desc">OpenAI тілдік үлгісі</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 95%"></div>
-            </div>
-          </div>
-
-          <div class="tool-card glass-card reveal" data-delay="2">
-            <div class="tool-card__icon tool-icon--claude" aria-label="Claude логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg3)"/>
-                <ellipse cx="24" cy="22" rx="10" ry="12" stroke="white" stroke-width="2" fill="none"/>
-                <path d="M18 34 Q24 38 30 34" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
-                <defs><linearGradient id="cg3" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#cc785c"/><stop offset="100%" stop-color="#a05a3f"/></linearGradient></defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">Claude</h3>
-            <p class="tool-card__desc">Anthropic AI көмекшісі</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 88%"></div>
-            </div>
-          </div>
-
-          <div class="tool-card glass-card reveal" data-delay="3">
-            <div class="tool-card__icon tool-icon--midjourney" aria-label="Midjourney логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg4)"/>
-                <path d="M16 36 L24 16 L32 36" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <path d="M19 28 H29" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                <defs><linearGradient id="cg4" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1a1a1a"/><stop offset="100%" stop-color="#333"/></linearGradient></defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">Midjourney</h3>
-            <p class="tool-card__desc">AI сурет генераторы</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 80%"></div>
-            </div>
-          </div>
-
-          <div class="tool-card glass-card reveal" data-delay="4">
-            <div class="tool-card__icon tool-icon--figma" aria-label="Figma логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg5)"/>
-                <circle cx="28" cy="24" r="6" stroke="#a78bfa" stroke-width="2" fill="none"/>
-                <rect x="16" y="12" width="12" height="12" rx="6" stroke="white" stroke-width="2" fill="none"/>
-                <rect x="16" y="24" width="12" height="12" rx="0 0 6 6" stroke="#f472b6" stroke-width="2" fill="none"/>
-                <defs><linearGradient id="cg5" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1e1b2e"/><stop offset="100%" stop-color="#2d2a40"/></linearGradient></defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">Figma</h3>
-            <p class="tool-card__desc">UI/UX дизайн платформасы</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 75%"></div>
-            </div>
-          </div>
-
-          <div class="tool-card glass-card reveal" data-delay="5">
-            <div class="tool-card__icon tool-icon--gemini" aria-label="Gemini логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg6)"/>
-                <path d="M24 8 C24 8 32 20 32 24 C32 28 24 40 24 40 C24 40 16 28 16 24 C16 20 24 8 24 8Z" stroke="url(#cg6b)" stroke-width="2" fill="none"/>
-                <path d="M8 24 C8 24 20 16 24 16 C28 16 40 24 40 24 C40 24 28 32 24 32 C20 32 8 24 8 24Z" stroke="url(#cg6c)" stroke-width="2" fill="none"/>
-                <defs>
-                  <linearGradient id="cg6" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1a1a3e"/><stop offset="100%" stop-color="#0f0f2e"/></linearGradient>
-                  <linearGradient id="cg6b" x1="24" y1="8" x2="24" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
-                  <linearGradient id="cg6c" x1="8" y1="24" x2="40" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#fb923c"/></linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">Gemini API</h3>
-            <p class="tool-card__desc">Google AI интеграция</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 85%"></div>
-            </div>
-          </div>
-
-          <div class="tool-card glass-card reveal" data-delay="6">
-            <div class="tool-card__icon tool-icon--vercel" aria-label="Vercel логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg7)"/>
-                <path d="M24 14 L38 36 H10 Z" fill="white"/>
-                <defs><linearGradient id="cg7" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#111"/><stop offset="100%" stop-color="#222"/></linearGradient></defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">Vercel</h3>
-            <p class="tool-card__desc">Жылдам деплой платформасы</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 78%"></div>
-            </div>
-          </div>
-
-          <div class="tool-card glass-card reveal" data-delay="7">
-            <div class="tool-card__icon tool-icon--github" aria-label="GitHub логотипі">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <rect width="48" height="48" rx="12" fill="url(#cg8)"/>
-                <path d="M24 10 C16.27 10 10 16.27 10 24 C10 30.19 14.15 35.43 19.78 37.29 C20.48 37.42 20.73 37 20.73 36.63 C20.73 36.29 20.72 35.42 20.71 34.26 C17.26 35.09 16.45 32.73 16.45 32.73 C15.81 31.1 14.89 30.67 14.89 30.67 C13.64 29.84 14.98 29.85 14.98 29.85 C16.36 29.95 17.08 31.26 17.08 31.26 C18.31 33.41 20.33 32.8 20.76 32.45 C20.88 31.59 21.22 31.01 21.6 30.69 C18.89 30.37 16.03 29.33 16.03 24.69 C16.03 23.13 16.58 21.86 17.51 20.87 C17.37 20.54 16.89 19.1 17.64 17.15 C17.64 17.15 18.81 16.8 20.71 18.07 C21.54 17.83 22.41 17.71 23.29 17.71 C24.16 17.71 25.04 17.84 25.86 18.07 C27.77 16.8 28.93 17.15 28.93 17.15 C29.68 19.1 29.2 20.54 29.06 20.87 C29.99 21.86 30.54 23.13 30.54 24.69 C30.54 29.35 27.68 30.37 24.95 30.69 C25.43 31.07 25.86 31.85 25.86 33.04 C25.86 34.74 25.84 36.1 25.84 36.63 C25.84 37.02 26.08 37.44 26.8 37.3 C32.42 35.43 36.57 30.18 36.57 24 C36.57 16.27 30.3 10 22.57 10 L24 10Z" fill="white"/>
-                <defs><linearGradient id="cg8" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#24292e"/><stop offset="100%" stop-color="#1a1e22"/></linearGradient></defs>
-              </svg>
-            </div>
-            <h3 class="tool-card__name">GitHub</h3>
-            <p class="tool-card__desc">Нұсқаларды басқару жүйесі</p>
-            <div class="tool-card__level">
-              <div class="level-bar" style="--level: 82%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════
          SYLLABUS SECTION
     ═══════════════════════════════════════════ -->
-    <section class="section syllabus-section" id="syllabus" aria-labelledby="syllabusTitle">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Бағдарлама</span>
-          <h2 class="section-title" id="syllabusTitle">Оқу <span class="gradient-text">Жоспары</span></h2>
-          <p class="section-desc">10 аптада нөлден AI бағдарламашысына — егжей-тегжейлі модульдер.</p>
+      <section
+        class="section syllabus-section"
+        id="syllabus"
+        aria-labelledby="syllabusTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Бағдарлама</span>
+            <h2 class="section-title" id="syllabusTitle">
+              Оқу <span class="gradient-text">Жоспары</span>
+            </h2>
+            <p class="section-desc">
+              10 аптада нөлден AI бағдарламашысына — егжей-тегжейлі модульдер.
+            </p>
+          </div>
+
+          <div class="syllabus-grid">
+            <div class="module-card glass-card reveal">
+              <div class="module-card__number" aria-hidden="true">01</div>
+              <div class="module-card__content">
+                <h3>Интернет & Веб негіздері</h3>
+                <ul class="module-list">
+                  <li>Интернет қалай жұмыс жасайды?</li>
+                  <li>HTML тегтері мен атрибуттары</li>
+                  <li>CSS стильдеу негіздері</li>
+                  <li>Алғашқы жеке веб-бет</li>
+                </ul>
+              </div>
+              <div class="module-card__duration">2 апта</div>
+            </div>
+
+            <div class="module-card glass-card reveal">
+              <div class="module-card__number" aria-hidden="true">02</div>
+              <div class="module-card__content">
+                <h3>AI Промпт Инженерия</h3>
+                <ul class="module-list">
+                  <li>ChatGPT, Claude, Gemini</li>
+                  <li>Тиімді промпт жазу</li>
+                  <li>AI-мен код жаздыру</li>
+                  <li>Қателерді AI арқылы түзету</li>
+                </ul>
+              </div>
+              <div class="module-card__duration">1 апта</div>
+            </div>
+
+            <div class="module-card glass-card reveal">
+              <div class="module-card__number" aria-hidden="true">03</div>
+              <div class="module-card__content">
+                <h3>JavaScript & Cursor IDE</h3>
+                <ul class="module-list">
+                  <li>JS негізгі конструкциялары</li>
+                  <li>Cursor IDE орнату & баптау</li>
+                  <li>AI Autocomplete & чат</li>
+                  <li>Интерактивті элементтер жасау</li>
+                </ul>
+              </div>
+              <div class="module-card__duration">2 апта</div>
+            </div>
+
+            <div class="module-card glass-card reveal">
+              <div class="module-card__number" aria-hidden="true">04</div>
+              <div class="module-card__content">
+                <h3>UI/UX Дизайн & Сурет AI</h3>
+                <ul class="module-list">
+                  <li>Figma: фреймдер, компоненттер</li>
+                  <li>Midjourney AI арт-директия</li>
+                  <li>Адаптивті дизайн (Responsive)</li>
+                  <li>CSS анимациялары</li>
+                </ul>
+              </div>
+              <div class="module-card__duration">2 апта</div>
+            </div>
+
+            <div class="module-card glass-card reveal">
+              <div class="module-card__number" aria-hidden="true">05</div>
+              <div class="module-card__content">
+                <h3>API & Backend Негіздері</h3>
+                <ul class="module-list">
+                  <li>API дегеніміз не?</li>
+                  <li>Node.js алғашқы қадамдар</li>
+                  <li>Gemini & OpenAI API</li>
+                  <li>JSON, Fetch, async/await</li>
+                </ul>
+              </div>
+              <div class="module-card__duration">2 апта</div>
+            </div>
+
+            <div class="module-card glass-card module-card--featured reveal">
+              <div class="module-card__number" aria-hidden="true">🚀</div>
+              <div class="module-card__content">
+                <h3>Түпкілікті Жоба</h3>
+                <ul class="module-list">
+                  <li>Идея + прототип</li>
+                  <li>Full-stack AI қосымша</li>
+                  <li>Vercel-ге деплой</li>
+                  <li>Презентация & сертификат</li>
+                </ul>
+              </div>
+              <div class="module-card__duration">1 апта</div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="syllabus-grid">
-          <div class="module-card glass-card reveal">
-            <div class="module-card__number" aria-hidden="true">01</div>
-            <div class="module-card__content">
-              <h3>Интернет & Веб негіздері</h3>
-              <ul class="module-list">
-                <li>Интернет қалай жұмыс жасайды?</li>
-                <li>HTML тегтері мен атрибуттары</li>
-                <li>CSS стильдеу негіздері</li>
-                <li>Алғашқы жеке веб-бет</li>
-              </ul>
-            </div>
-            <div class="module-card__duration">2 апта</div>
-          </div>
-
-          <div class="module-card glass-card reveal">
-            <div class="module-card__number" aria-hidden="true">02</div>
-            <div class="module-card__content">
-              <h3>AI Промпт Инженерия</h3>
-              <ul class="module-list">
-                <li>ChatGPT, Claude, Gemini</li>
-                <li>Тиімді промпт жазу</li>
-                <li>AI-мен код жаздыру</li>
-                <li>Қателерді AI арқылы түзету</li>
-              </ul>
-            </div>
-            <div class="module-card__duration">1 апта</div>
-          </div>
-
-          <div class="module-card glass-card reveal">
-            <div class="module-card__number" aria-hidden="true">03</div>
-            <div class="module-card__content">
-              <h3>JavaScript & Cursor IDE</h3>
-              <ul class="module-list">
-                <li>JS негізгі конструкциялары</li>
-                <li>Cursor IDE орнату & баптау</li>
-                <li>AI Autocomplete & чат</li>
-                <li>Интерактивті элементтер жасау</li>
-              </ul>
-            </div>
-            <div class="module-card__duration">2 апта</div>
-          </div>
-
-          <div class="module-card glass-card reveal">
-            <div class="module-card__number" aria-hidden="true">04</div>
-            <div class="module-card__content">
-              <h3>UI/UX Дизайн & Сурет AI</h3>
-              <ul class="module-list">
-                <li>Figma: фреймдер, компоненттер</li>
-                <li>Midjourney AI арт-директия</li>
-                <li>Адаптивті дизайн (Responsive)</li>
-                <li>CSS анимациялары</li>
-              </ul>
-            </div>
-            <div class="module-card__duration">2 апта</div>
-          </div>
-
-          <div class="module-card glass-card reveal">
-            <div class="module-card__number" aria-hidden="true">05</div>
-            <div class="module-card__content">
-              <h3>API & Backend Негіздері</h3>
-              <ul class="module-list">
-                <li>API дегеніміз не?</li>
-                <li>Node.js алғашқы қадамдар</li>
-                <li>Gemini & OpenAI API</li>
-                <li>JSON, Fetch, async/await</li>
-              </ul>
-            </div>
-            <div class="module-card__duration">2 апта</div>
-          </div>
-
-          <div class="module-card glass-card module-card--featured reveal">
-            <div class="module-card__number" aria-hidden="true">🚀</div>
-            <div class="module-card__content">
-              <h3>Түпкілікті Жоба</h3>
-              <ul class="module-list">
-                <li>Идея + прототип</li>
-                <li>Full-stack AI қосымша</li>
-                <li>Vercel-ге деплой</li>
-                <li>Презентация & сертификат</li>
-              </ul>
-            </div>
-            <div class="module-card__duration">1 апта</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════
          TEACHERS SECTION
     ═══════════════════════════════════════════ -->
-    <section class="section teachers-section" id="teachers" aria-labelledby="teachersTitle">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Оқытушылар</span>
-          <h2 class="section-title" id="teachersTitle">Сіздің <span class="gradient-text">Тьюторларыңыз</span></h2>
-          <p class="section-desc">Тәжірибелі, жасы өткір, AI-мен дос тьюторлар командасы.</p>
+      <section
+        class="section teachers-section"
+        id="teachers"
+        aria-labelledby="teachersTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Оқытушылар</span>
+            <h2 class="section-title" id="teachersTitle">
+              Сіздің <span class="gradient-text">Тьюторларыңыз</span>
+            </h2>
+            <p class="section-desc">
+              Тәжірибелі, жасы өткір, AI-мен дос тьюторлар командасы.
+            </p>
+          </div>
+
+          <div class="teachers-grid">
+            <article
+              class="teacher-card glass-card reveal"
+              aria-label="Оқытушы: Айбол Нұрланұлы"
+            >
+              <div class="teacher-card__avatar-wrapper">
+                <div
+                  class="teacher-card__avatar teacher-avatar--1"
+                  aria-hidden="true"
+                >
+                  <!-- AI-generated avatar placeholder -->
+                  <div class="avatar-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                      <circle
+                        cx="40"
+                        cy="30"
+                        r="16"
+                        fill="rgba(167,139,250,0.4)"
+                        stroke="url(#av1)"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72"
+                        fill="rgba(167,139,250,0.3)"
+                        stroke="url(#av1)"
+                        stroke-width="2"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="av1"
+                          x1="0"
+                          y1="0"
+                          x2="80"
+                          y2="80"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0%" stop-color="#a78bfa" />
+                          <stop offset="100%" stop-color="#38bdf8" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="avatar-ring" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Айбол Нұрланұлы</h3>
+                <span class="teacher-role"
+                  >Бас тьютор & Full-Stack Developer</span
+                >
+                <p class="teacher-bio">
+                  5+ жыл тәжірибесі бар, React, Node.js, және AI интеграцияда
+                  маман. 200+ жоба жасаған.
+                </p>
+                <div class="teacher-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">AI/ML</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="teacher-card glass-card reveal"
+              aria-label="Оқытушы: Дана Сейітқалиқызы"
+            >
+              <div class="teacher-card__avatar-wrapper">
+                <div
+                  class="teacher-card__avatar teacher-avatar--2"
+                  aria-hidden="true"
+                >
+                  <div class="avatar-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                      <circle
+                        cx="40"
+                        cy="30"
+                        r="16"
+                        fill="rgba(244,114,182,0.4)"
+                        stroke="url(#av2)"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72"
+                        fill="rgba(244,114,182,0.3)"
+                        stroke="url(#av2)"
+                        stroke-width="2"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="av2"
+                          x1="0"
+                          y1="0"
+                          x2="80"
+                          y2="80"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0%" stop-color="#f472b6" />
+                          <stop offset="100%" stop-color="#fb923c" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="avatar-ring" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Дана Сейітқалиқызы</h3>
+                <span class="teacher-role"
+                  >UI/UX Дизайнер & AI Art Director</span
+                >
+                <p class="teacher-bio">
+                  Figma, Midjourney маманы. 3+ жыл балаларға дизайн үйреткен
+                  тәжірибесі бар.
+                </p>
+                <div class="teacher-tags">
+                  <span class="tag">Figma</span>
+                  <span class="tag">Midjourney</span>
+                  <span class="tag">CSS</span>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="teacher-card glass-card reveal"
+              aria-label="Оқытушы: Ерлан Жақсыбеков"
+            >
+              <div class="teacher-card__avatar-wrapper">
+                <div
+                  class="teacher-card__avatar teacher-avatar--3"
+                  aria-hidden="true"
+                >
+                  <div class="avatar-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                      <circle
+                        cx="40"
+                        cy="30"
+                        r="16"
+                        fill="rgba(52,211,153,0.4)"
+                        stroke="url(#av3)"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72"
+                        fill="rgba(52,211,153,0.3)"
+                        stroke="url(#av3)"
+                        stroke-width="2"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="av3"
+                          x1="0"
+                          y1="0"
+                          x2="80"
+                          y2="80"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop offset="0%" stop-color="#34d399" />
+                          <stop offset="100%" stop-color="#60a5fa" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="avatar-ring" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="teacher-card__info">
+                <h3 class="teacher-name">Ерлан Жақсыбеков</h3>
+                <span class="teacher-role">AI & Промпт Инженерия Тьюторы</span>
+                <p class="teacher-bio">
+                  ChatGPT, Claude, Gemini API маманы. Технологиялар стартапында
+                  4 жыл жұмыс тәжірибесі.
+                </p>
+                <div class="teacher-tags">
+                  <span class="tag">Prompt Eng.</span>
+                  <span class="tag">Gemini API</span>
+                  <span class="tag">Python</span>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="teachers-grid">
-          <article class="teacher-card glass-card reveal" aria-label="Оқытушы: Айбол Нұрланұлы">
-            <div class="teacher-card__avatar-wrapper">
-              <div class="teacher-card__avatar teacher-avatar--1" aria-hidden="true">
-                <!-- AI-generated avatar placeholder -->
-                <div class="avatar-placeholder">
-                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="30" r="16" fill="rgba(167,139,250,0.4)" stroke="url(#av1)" stroke-width="2"/>
-                    <path d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72" fill="rgba(167,139,250,0.3)" stroke="url(#av1)" stroke-width="2"/>
-                    <defs><linearGradient id="av1" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient></defs>
-                  </svg>
-                </div>
-                <div class="avatar-ring" aria-hidden="true"></div>
-              </div>
-            </div>
-            <div class="teacher-card__info">
-              <h3 class="teacher-name">Айбол Нұрланұлы</h3>
-              <span class="teacher-role">Бас тьютор & Full-Stack Developer</span>
-              <p class="teacher-bio">5+ жыл тәжірибесі бар, React, Node.js, және AI интеграцияда маман. 200+ жоба жасаған.</p>
-              <div class="teacher-tags">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">AI/ML</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="teacher-card glass-card reveal" aria-label="Оқытушы: Дана Сейітқалиқызы">
-            <div class="teacher-card__avatar-wrapper">
-              <div class="teacher-card__avatar teacher-avatar--2" aria-hidden="true">
-                <div class="avatar-placeholder">
-                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="30" r="16" fill="rgba(244,114,182,0.4)" stroke="url(#av2)" stroke-width="2"/>
-                    <path d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72" fill="rgba(244,114,182,0.3)" stroke="url(#av2)" stroke-width="2"/>
-                    <defs><linearGradient id="av2" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#fb923c"/></linearGradient></defs>
-                  </svg>
-                </div>
-                <div class="avatar-ring" aria-hidden="true"></div>
-              </div>
-            </div>
-            <div class="teacher-card__info">
-              <h3 class="teacher-name">Дана Сейітқалиқызы</h3>
-              <span class="teacher-role">UI/UX Дизайнер & AI Art Director</span>
-              <p class="teacher-bio">Figma, Midjourney маманы. 3+ жыл балаларға дизайн үйреткен тәжірибесі бар.</p>
-              <div class="teacher-tags">
-                <span class="tag">Figma</span>
-                <span class="tag">Midjourney</span>
-                <span class="tag">CSS</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="teacher-card glass-card reveal" aria-label="Оқытушы: Ерлан Жақсыбеков">
-            <div class="teacher-card__avatar-wrapper">
-              <div class="teacher-card__avatar teacher-avatar--3" aria-hidden="true">
-                <div class="avatar-placeholder">
-                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                    <circle cx="40" cy="30" r="16" fill="rgba(52,211,153,0.4)" stroke="url(#av3)" stroke-width="2"/>
-                    <path d="M14 72 C14 56 24 46 40 46 C56 46 66 56 66 72" fill="rgba(52,211,153,0.3)" stroke="url(#av3)" stroke-width="2"/>
-                    <defs><linearGradient id="av3" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient></defs>
-                  </svg>
-                </div>
-                <div class="avatar-ring" aria-hidden="true"></div>
-              </div>
-            </div>
-            <div class="teacher-card__info">
-              <h3 class="teacher-name">Ерлан Жақсыбеков</h3>
-              <span class="teacher-role">AI & Промпт Инженерия Тьюторы</span>
-              <p class="teacher-bio">ChatGPT, Claude, Gemini API маманы. Технологиялар стартапында 4 жыл жұмыс тәжірибесі.</p>
-              <div class="teacher-tags">
-                <span class="tag">Prompt Eng.</span>
-                <span class="tag">Gemini API</span>
-                <span class="tag">Python</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════
          FAQ SECTION
     ═══════════════════════════════════════════ -->
-    <section class="section faq-section" id="faq" aria-labelledby="faqTitle">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Сұрақтар</span>
-          <h2 class="section-title" id="faqTitle">Жиі Қойылатын <span class="gradient-text">Сұрақтар</span></h2>
-          <p class="section-desc">Ата-аналар мен оқушылардың ең жиі қоятын сұрақтарына жауаптар.</p>
+      <section class="section faq-section" id="faq" aria-labelledby="faqTitle">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Сұрақтар</span>
+            <h2 class="section-title" id="faqTitle">
+              Жиі Қойылатын <span class="gradient-text">Сұрақтар</span>
+            </h2>
+            <p class="section-desc">
+              Ата-аналар мен оқушылардың ең жиі қоятын сұрақтарына жауаптар.
+            </p>
+          </div>
+
+          <div class="faq-list" id="faqList" role="list">
+            <div class="faq-item glass-card reveal" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-1"
+                id="faq-btn-1"
+              >
+                <span>Курс қай жастан басталады?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M5 8l5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-answer-1"
+                role="region"
+                aria-labelledby="faq-btn-1"
+              >
+                <p>
+                  Курс <strong>8 жастан 16 жасқа</strong> дейінгі балаларға
+                  арналған. Жас ерекшеліктеріне қарай топтастырылған: 8–11 жас
+                  (Junior), 12–16 жас (Senior).
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card reveal" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-2"
+                id="faq-btn-2"
+              >
+                <span>Алдын ала білім қажет пе?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M5 8l5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-answer-2"
+                role="region"
+                aria-labelledby="faq-btn-2"
+              >
+                <p>
+                  Жоқ! Курс нөлден бастайды. Баланың тек компьютерді пайдалана
+                  алуы жеткілікті. Бағдарламалау тәжірибесі мүлдем қажет емес.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card reveal" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-3"
+                id="faq-btn-3"
+              >
+                <span>Курс тілдік формате жүреді?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M5 8l5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-answer-3"
+                role="region"
+                aria-labelledby="faq-btn-3"
+              >
+                <p>
+                  Курс толығымен <strong>қазақ тілінде</strong> жүреді. Барлық
+                  сабақтар, материалдар және тьютормен байланыс — қазақша.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card reveal" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-4"
+                id="faq-btn-4"
+              >
+                <span>Сабақтар онлайн ба, офлайн ба?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M5 8l5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-answer-4"
+                role="region"
+                aria-labelledby="faq-btn-4"
+              >
+                <p>
+                  Екі формат та бар. <strong>Онлайн</strong> (Zoom/Meet арқылы)
+                  және <strong>Алматыдағы офлайн</strong> оқу орнымызда. Ыңғайлы
+                  форматты өзіңіз таңдайсыз.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card reveal" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-5"
+                id="faq-btn-5"
+              >
+                <span>Курсты аяқтасам қандай сертификат аламын?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M5 8l5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-answer-5"
+                role="region"
+                aria-labelledby="faq-btn-5"
+              >
+                <p>
+                  Курсты сәтті аяқтаған оқушылар
+                  <strong>Trion School AI Vibecoding</strong> ресми сертификатын
+                  алады. Сонымен қатар, жеке жобаларыңыз портфолиода сақталады.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item glass-card reveal" role="listitem">
+              <button
+                class="faq-question"
+                aria-expanded="false"
+                aria-controls="faq-answer-6"
+                id="faq-btn-6"
+              >
+                <span>Курстың бағасы қанша?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M5 8l5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-answer"
+                id="faq-answer-6"
+                role="region"
+                aria-labelledby="faq-btn-6"
+              >
+                <p>
+                  Баға мен ағымдағы акциялар туралы ақпаратты алу үшін байланыс
+                  формасы арқылы немесе тікелей
+                  <strong>+7 (777) XXX-XX-XX</strong> нөміріне хабарласыңыз.
+                  Алғашқы 10 орын үшін арнайы баға бар!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="faq-list" id="faqList" role="list">
-
-          <div class="faq-item glass-card reveal" role="listitem">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              aria-controls="faq-answer-1"
-              id="faq-btn-1"
-            >
-              <span>Курс қай жастан басталады?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1">
-              <p>Курс <strong>8 жастан 16 жасқа</strong> дейінгі балаларға арналған. Жас ерекшеліктеріне қарай топтастырылған: 8–11 жас (Junior), 12–16 жас (Senior).</p>
-            </div>
-          </div>
-
-          <div class="faq-item glass-card reveal" role="listitem">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              aria-controls="faq-answer-2"
-              id="faq-btn-2"
-            >
-              <span>Алдын ала білім қажет пе?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2">
-              <p>Жоқ! Курс нөлден бастайды. Баланың тек компьютерді пайдалана алуы жеткілікті. Бағдарламалау тәжірибесі мүлдем қажет емес.</p>
-            </div>
-          </div>
-
-          <div class="faq-item glass-card reveal" role="listitem">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              aria-controls="faq-answer-3"
-              id="faq-btn-3"
-            >
-              <span>Курс тілдік формате жүреді?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3">
-              <p>Курс толығымен <strong>қазақ тілінде</strong> жүреді. Барлық сабақтар, материалдар және тьютормен байланыс — қазақша.</p>
-            </div>
-          </div>
-
-          <div class="faq-item glass-card reveal" role="listitem">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              aria-controls="faq-answer-4"
-              id="faq-btn-4"
-            >
-              <span>Сабақтар онлайн ба, офлайн ба?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4">
-              <p>Екі формат та бар. <strong>Онлайн</strong> (Zoom/Meet арқылы) және <strong>Алматыдағы офлайн</strong> оқу орнымызда. Ыңғайлы форматты өзіңіз таңдайсыз.</p>
-            </div>
-          </div>
-
-          <div class="faq-item glass-card reveal" role="listitem">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              aria-controls="faq-answer-5"
-              id="faq-btn-5"
-            >
-              <span>Курсты аяқтасам қандай сертификат аламын?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5">
-              <p>Курсты сәтті аяқтаған оқушылар <strong>Trion School AI Vibecoding</strong> ресми сертификатын алады. Сонымен қатар, жеке жобаларыңыз портфолиода сақталады.</p>
-            </div>
-          </div>
-
-          <div class="faq-item glass-card reveal" role="listitem">
-            <button
-              class="faq-question"
-              aria-expanded="false"
-              aria-controls="faq-answer-6"
-              id="faq-btn-6"
-            >
-              <span>Курстың бағасы қанша?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </span>
-            </button>
-            <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-btn-6">
-              <p>Баға мен ағымдағы акциялар туралы ақпаратты алу үшін байланыс формасы арқылы немесе тікелей <strong>+7 (777) XXX-XX-XX</strong> нөміріне хабарласыңыз. Алғашқы 10 орын үшін арнайы баға бар!</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
+      <!-- ═══════════════════════════════════════════
          CONTACT FORM SECTION
     ═══════════════════════════════════════════ -->
-    <section class="section contact-section" id="contact" aria-labelledby="contactTitle">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Байланыс</span>
-          <h2 class="section-title" id="contactTitle">Бізбен <span class="gradient-text">Байланысыңыз</span></h2>
-          <p class="section-desc">Орынды брондаңыз немесе сұрақтарыңызды жіберіңіз — 24 сағат ішінде жауап береміз.</p>
-        </div>
-
-        <div class="contact-wrapper reveal">
-          <div class="contact-info">
-            <div class="contact-info-item">
-              <div class="contact-info-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" stroke="url(#ci1)" stroke-width="2"/><path d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" stroke="url(#ci1)" stroke-width="2"/><defs><linearGradient id="ci1" x1="6" y1="4" x2="18" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs></svg>
-              </div>
-              <div>
-                <strong>Мекен-жай</strong>
-                <span>Алматы қаласы, Достық даңғылы, 200</span>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .948.684l1.498 4.493a1 1 0 0 1-.502 1.21l-2.257 1.13a11.042 11.042 0 0 0 5.516 5.516l1.13-2.257a1 1 0 0 1 1.21-.502l4.493 1.498a1 1 0 0 1 .684.949V19a2 2 0 0 1-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="url(#ci2)" stroke-width="2"/><defs><linearGradient id="ci2" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#f472b6"/><stop offset="1" stop-color="#fb923c"/></linearGradient></defs></svg>
-              </div>
-              <div>
-                <strong>Телефон</strong>
-                <span>+7 (777) 123-45-67</span>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z" stroke="url(#ci3)" stroke-width="2"/><defs><linearGradient id="ci3" x1="3" y1="5" x2="21" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#34d399"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs></svg>
-              </div>
-              <div>
-                <strong>Email</strong>
-                <span>info@trionschool.kz</span>
-              </div>
-            </div>
+      <section
+        class="section contact-section"
+        id="contact"
+        aria-labelledby="contactTitle"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-tag">Байланыс</span>
+            <h2 class="section-title" id="contactTitle">
+              Бізбен <span class="gradient-text">Байланысыңыз</span>
+            </h2>
+            <p class="section-desc">
+              Орынды брондаңыз немесе сұрақтарыңызды жіберіңіз — 24 сағат ішінде
+              жауап береміз.
+            </p>
           </div>
 
-          <form class="contact-form glass-card" id="contactForm" novalidate aria-label="Байланыс формасы">
-            <div class="form-row">
+          <div class="contact-wrapper reveal">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"
+                      stroke="url(#ci1)"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                      stroke="url(#ci1)"
+                      stroke-width="2"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="ci1"
+                        x1="6"
+                        y1="4"
+                        x2="18"
+                        y2="20"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#a78bfa" />
+                        <stop offset="1" stop-color="#38bdf8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Мекен-жай</strong>
+                  <span>Алматы қаласы, Достық даңғылы, 200</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .948.684l1.498 4.493a1 1 0 0 1-.502 1.21l-2.257 1.13a11.042 11.042 0 0 0 5.516 5.516l1.13-2.257a1 1 0 0 1 1.21-.502l4.493 1.498a1 1 0 0 1 .684.949V19a2 2 0 0 1-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      stroke="url(#ci2)"
+                      stroke-width="2"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="ci2"
+                        x1="3"
+                        y1="3"
+                        x2="21"
+                        y2="21"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#f472b6" />
+                        <stop offset="1" stop-color="#fb923c" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Телефон</strong>
+                  <span>+7 (777) 123-45-67</span>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="contact-info-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"
+                      stroke="url(#ci3)"
+                      stroke-width="2"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="ci3"
+                        x1="3"
+                        y1="5"
+                        x2="21"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#34d399" />
+                        <stop offset="1" stop-color="#60a5fa" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <span>info@trionschool.kz</span>
+                </div>
+              </div>
+            </div>
+
+            <form
+              class="contact-form glass-card"
+              id="contactForm"
+              novalidate
+              aria-label="Байланыс формасы"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label"
+                    >Аты-жөні <span aria-hidden="true">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input glass-input"
+                    placeholder="Иван Иванов"
+                    required
+                    autocomplete="name"
+                    aria-required="true"
+                  />
+                  <span class="form-error" id="nameError" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label"
+                    >Телефон <span aria-hidden="true">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-input glass-input"
+                    placeholder="+7 (___) ___-__-__"
+                    required
+                    autocomplete="tel"
+                    aria-required="true"
+                  />
+                  <span class="form-error" id="phoneError" role="alert"></span>
+                </div>
+              </div>
+
               <div class="form-group">
-                <label for="name" class="form-label">Аты-жөні <span aria-hidden="true">*</span></label>
+                <label for="email" class="form-label"
+                  >Email <span aria-hidden="true">*</span></label
+                >
                 <input
-                  type="text"
-                  id="name"
-                  name="name"
+                  type="email"
+                  id="email"
+                  name="email"
                   class="form-input glass-input"
-                  placeholder="Иван Иванов"
+                  placeholder="example@mail.com"
                   required
-                  autocomplete="name"
+                  autocomplete="email"
                   aria-required="true"
                 />
-                <span class="form-error" id="nameError" role="alert"></span>
+                <span class="form-error" id="emailError" role="alert"></span>
               </div>
+
               <div class="form-group">
-                <label for="phone" class="form-label">Телефон <span aria-hidden="true">*</span></label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  class="form-input glass-input"
-                  placeholder="+7 (___) ___-__-__"
-                  required
-                  autocomplete="tel"
-                  aria-required="true"
-                />
-                <span class="form-error" id="phoneError" role="alert"></span>
+                <label for="message" class="form-label">Хабарлама</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea glass-input"
+                  placeholder="Сұрақтарыңызды немесе ескертпелеріңізді жазыңыз..."
+                  rows="4"
+                  autocomplete="off"
+                ></textarea>
               </div>
-            </div>
 
-            <div class="form-group">
-              <label for="email" class="form-label">Email <span aria-hidden="true">*</span></label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-input glass-input"
-                placeholder="example@mail.com"
-                required
-                autocomplete="email"
-                aria-required="true"
-              />
-              <span class="form-error" id="emailError" role="alert"></span>
-            </div>
+              <button
+                type="submit"
+                class="btn btn--primary btn--full liquid-btn"
+                id="submitBtn"
+              >
+                <span class="btn__glow" aria-hidden="true"></span>
+                <span class="btn__text" id="submitBtnText">Жіберу</span>
+                <svg
+                  class="btn__arrow"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 10h12M10 4l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
 
-            <div class="form-group">
-              <label for="message" class="form-label">Хабарлама</label>
-              <textarea
-                id="message"
-                name="message"
-                class="form-input form-textarea glass-input"
-                placeholder="Сұрақтарыңызды немесе ескертпелеріңізді жазыңыз..."
-                rows="4"
-                autocomplete="off"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--primary btn--full liquid-btn" id="submitBtn">
-              <span class="btn__glow" aria-hidden="true"></span>
-              <span class="btn__text" id="submitBtnText">Жіберу</span>
-              <svg class="btn__arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-
-            <div class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Хабарламаңыз жіберілді! 24 сағат ішінде хабарласамыз. 🎉</span>
-            </div>
-          </form>
+              <div
+                class="form-success"
+                id="formSuccess"
+                role="alert"
+                aria-live="polite"
+                hidden
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"
+                    stroke="#34d399"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span
+                  >Хабарламаңыз жіберілді! 24 сағат ішінде хабарласамыз.
+                  🎉</span
+                >
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
-
-  <!-- ═══════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="#hero" class="navbar__logo" aria-label="Trion School">
-            <span class="logo-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><polygon points="16,2 30,28 2,28" fill="none" stroke="url(#fLogoGrad)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="16" cy="16" r="5" fill="url(#fLogoGrad)"/><defs><linearGradient id="fLogoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient></defs></svg>
-            </span>
-            <span class="logo-text">Trion <strong>School</strong></span>
-          </a>
-          <p>Балаларға арналған AI бағдарламалау мектебі. Болашақты бірге жасайық.</p>
-        </div>
-        <nav class="footer__links" aria-label="Жылдам сілтемелер">
-          <h4>Сілтемелер</h4>
-          <ul>
-            <li><a href="#about">Ақпарат</a></li>
-            <li><a href="#roadmap">Жол картасы</a></li>
-            <li><a href="#syllabus">Бағдарлама</a></li>
-            <li><a href="#teachers">Оқытушылар</a></li>
-          </ul>
-        </nav>
-        <div class="footer__social">
-          <h4>Байланыс</h4>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="#hero" class="navbar__logo" aria-label="Trion School">
+              <span class="logo-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                  <polygon
+                    points="16,2 30,28 2,28"
+                    fill="none"
+                    stroke="url(#fLogoGrad)"
+                    stroke-width="2.5"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="16" cy="16" r="5" fill="url(#fLogoGrad)" />
+                  <defs>
+                    <linearGradient
+                      id="fLogoGrad"
+                      x1="0"
+                      y1="0"
+                      x2="32"
+                      y2="32"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stop-color="#a78bfa" />
+                      <stop offset="100%" stop-color="#38bdf8" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+              <span class="logo-text">Trion <strong>School</strong></span>
             </a>
-            <a href="#" class="social-link" aria-label="Telegram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.99 4.33 3 11.5l6.5 1.75 2 6.25 3-3.5 5 4 2.49-15.67z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="YouTube">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="3" stroke="currentColor" stroke-width="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg>
-            </a>
+            <p>
+              Балаларға арналған AI бағдарламалау мектебі. Болашақты бірге
+              жасайық.
+            </p>
+          </div>
+          <nav class="footer__links" aria-label="Жылдам сілтемелер">
+            <h4>Сілтемелер</h4>
+            <ul>
+              <li><a href="#about">Ақпарат</a></li>
+              <li><a href="#roadmap">Жол картасы</a></li>
+              <li><a href="#syllabus">Бағдарлама</a></li>
+              <li><a href="#teachers">Оқытушылар</a></li>
+            </ul>
+          </nav>
+          <div class="footer__social">
+            <h4>Байланыс</h4>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="2"
+                    y="2"
+                    width="20"
+                    height="20"
+                    rx="5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M21.99 4.33 3 11.5l6.5 1.75 2 6.25 3-3.5 5 4 2.49-15.67z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="2"
+                    y="5"
+                    width="20"
+                    height="14"
+                    rx="3"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path d="M10 9l5 3-5 3V9z" fill="currentColor" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
+        <div class="footer__bottom">
+          <p>© 2026 Trion School. Барлық құқықтар қорғалған.</p>
+          <p>Жасалды ❤️ Алматы, Қазақстан</p>
+        </div>
       </div>
-      <div class="footer__bottom">
-        <p>© 2026 Trion School. Барлық құқықтар қорғалған.</p>
-        <p>Жасалды ❤️ Алматы, Қазақстан</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Scripts -->
-  <script src="js/main.js" defer></script>
-  <script src="js/particles.js" defer></script>
-  <script src="js/animations.js" defer></script>
-
-</body>
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/roadmap.js" defer></script>
+    <script src="js/particles.js" defer></script>
+    <script src="js/animations.js" defer></script>
+  </body>
 </html>
-

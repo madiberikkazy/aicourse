@@ -4,6 +4,111 @@
    ═══════════════════════════════════════════════════════ */
 
 /* ─── CSS Custom Properties ─────────────────────────── */
+
+/* Кликабельная карточка шага */
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100px;   /* match the header <img> size */
+  height: 50px;
+}
+
+.logo-icon-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}.timeline-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.timeline-card__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  text-align: inherit;
+}
+
+.timeline-item:nth-child(odd) .timeline-card__toggle {
+  flex-direction: row-reverse;
+}
+
+.timeline-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline-card__chevron {
+  flex-shrink: 0;
+  display: flex;
+  color: var(--color-text-muted);
+  transition: transform var(--transition-spring), color var(--transition-fast);
+}
+
+.timeline-card.is-open .timeline-card__chevron {
+  transform: rotate(180deg);
+  color: #a78bfa;
+}
+
+.timeline-card__summary {
+  padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-lg);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.timeline-card__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-slow);
+}
+
+.timeline-card.is-open .timeline-card__panel {
+  grid-template-rows: 1fr;
+}
+
+.timeline-card__panel-inner {
+  overflow: hidden;
+}
+
+.timeline-card__panel .timeline-skills {
+  padding: 0 var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-card__extra {
+  padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg);
+  margin-top: var(--spacing-xs);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.87rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.timeline-card.is-open {
+  border-color: rgba(167, 139, 250, 0.3);
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.08);
+}
+
+.timeline-item:nth-child(odd) .timeline-skills {
+  justify-content: flex-end;
+}
+.timeline-item:nth-child(even) .timeline-skills {
+  justify-content: flex-start;
+}
+
 :root {
   /* Colors */
   --color-bg: #050510;
@@ -756,14 +861,24 @@ ul, ol {
   margin-bottom: var(--spacing-xl);
 }
 
-/* Alternate sides */
-.timeline-item:nth-child(odd) .timeline-marker { order: 2; }
-.timeline-item:nth-child(odd) .timeline-card   { order: 1; text-align: right; }
+/* Маркер всегда в центральной колонке — независимо от стороны */
+.timeline-marker {
+  grid-column: 2;
+  grid-row: 1;
+}
 
-.timeline-item:nth-child(even) .timeline-marker { order: 2; }
-.timeline-item:nth-child(even) .timeline-card   { order: 3; text-align: left; }
-.timeline-item:nth-child(even) > .timeline-card { grid-column: 3; }
+/* Карточка — слева или справа от линии, в зависимости от чётности */
+.timeline-item:nth-child(odd) .timeline-card {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+}
 
+.timeline-item:nth-child(even) .timeline-card {
+  grid-column: 3;
+  grid-row: 1;
+  text-align: left;
+}
 /* Marker */
 .timeline-marker {
   position: relative;
