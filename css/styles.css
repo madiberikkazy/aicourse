@@ -2200,6 +2200,25 @@ ul, ol {
   color: var(--color-text);
 }
 
+/* Link to register page inside modal */
+.auth-modal__register-link {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.auth-modal__register-link a {
+  color: #a78bfa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.auth-modal__register-link a:hover {
+  color: #c4b5fd;
+}
+
 /* ════════════════════════════════════════════════════════
    NEW: COURSES SECTION
 ════════════════════════════════════════════════════════ */
