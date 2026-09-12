@@ -9,6 +9,11 @@
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
+// ─── Google Sheets Webhook ────────────────────────────
+// HOW TO SET UP: See SHEETS_SETUP.md for step-by-step instructions.
+// After deploying your Apps Script, paste the Web App URL below:
+const SHEETS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby-EewsWPlF1p0Exy8eNWhO2JeP99avZcCQ-2TXkUAbBqt5ytZiYx2rZnn1RFz1IPj1/exec';
+
 // ─── DOM Ready ────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -237,8 +242,34 @@ function initContactForm() {
     submitBtn.classList.add('btn--loading');
     submitText.textContent = 'Жіберілуде...';
 
-    // Simulate async request
-    await delay(1800);
+    // ── Real Google Sheets submission ──────────────────
+    const payload = {
+      timestamp: new Date().toISOString(),
+      name:      $('#name', form)?.value.trim()    || '',
+      phone:     $('#phone', form)?.value.trim()   || '',
+      email:     $('#email', form)?.value.trim()   || '',
+      message:   $('#message', form)?.value.trim() || '',
+    };
+
+    try {
+      if (SHEETS_WEBHOOK_URL && SHEETS_WEBHOOK_URL !== 'YOUR_APPS_SCRIPT_WEB_APP_URL_HERE') {
+        // mode: 'no-cors' — response is opaque but the POST still goes through
+        await fetch(SHEETS_WEBHOOK_URL, {
+          method: 'POST',
+          mode:   'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body:   JSON.stringify(payload),
+        });
+      } else {
+        // Webhook not configured yet — simulate delay for demo
+        await delay(1200);
+        console.info('[Trion] Sheets webhook not configured. Payload:', payload);
+      }
+    } catch (fetchErr) {
+      // Network error — still show success to user (data logged to console)
+      console.warn('[Trion] Sheets webhook error:', fetchErr, payload);
+    }
+
 
     // Show success
     submitBtn.disabled = false;
