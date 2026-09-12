@@ -6,6 +6,12 @@
 /* ─── CSS Custom Properties ─────────────────────────── */
 
 /* Кликабельная карточка шага */
+.teacher-card__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 .logo-icon {
   display: inline-flex;
   align-items: center;
@@ -1183,8 +1189,10 @@ ul, ol {
 
 .teachers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
+  max-width: 760px;
+  margin-inline: auto;
 }
 
 .teacher-card {
