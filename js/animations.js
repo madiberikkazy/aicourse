@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   ANIMATIONS JS — Trion School
+   ANIMATIONS JS — Trion Education
    Advanced scroll-driven effects and micro-interactions
    ═══════════════════════════════════════════════════════ */
 

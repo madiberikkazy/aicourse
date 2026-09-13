@@ -1,5 +1,5 @@
 # Google Sheets Integration — Setup Guide
-## Trion School AI Vibecoding Course
+## Trion Education AI Vibecoding Course
 
 This file explains how to connect your contact form to a Google Sheet in under 5 minutes.
 
@@ -8,7 +8,7 @@ This file explains how to connect your contact form to a Google Sheet in under 5
 ## Step 1 — Create a Google Sheet
 
 1. Go to [sheets.google.com](https://sheets.google.com) and create a new blank spreadsheet.
-2. Name it **"Trion School — Байланыс"** (or anything you prefer).
+2. Name it **"Trion Education — Байланыс"** (or anything you prefer).
 3. In **Row 1**, add these headers (in order, starting from column A):
 
 | A | B | C | D | E |
@@ -53,7 +53,7 @@ function doPost(e) {
 // Optional: GET handler for testing
 function doGet(e) {
   return ContentService
-    .createTextOutput('Trion School Sheets Webhook is running ✅')
+    .createTextOutput('Trion Education Sheets Webhook is running ✅')
     .setMimeType(ContentService.MimeType.TEXT);
 }
 ```
@@ -121,5 +121,5 @@ Don't forget to also fill in `js/firebase-config.js` with your Firebase project 
 
 ---
 
-*Trion School — AI Vibecoding Course*
+*Trion Education — AI Vibecoding Course*
 

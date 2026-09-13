@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
    REGISTER.JS — Dedicated registration page logic
-   Trion School AI Vibecoding Course
+   Trion Education AI Vibecoding Course
    ═══════════════════════════════════════════════════════ */
 
 import { auth } from './firebase-config.js';
