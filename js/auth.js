@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
    AUTH.JS — Firebase Authentication Module
-   Trion School AI Vibecoding Course
+   Trion Education AI Vibecoding Course
    ─────────────────────────────────────────────────────
    Handles: Sign In, Sign Up, Google OAuth,
             Sign Out, onAuthStateChanged,

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   FIREBASE CONFIG — Trion School AI Vibecoding Course
+   FIREBASE CONFIG — Trion Education AI Vibecoding Course
    Uses CDN ESM imports (no build tool needed)
    ═══════════════════════════════════════════════════════ */
 

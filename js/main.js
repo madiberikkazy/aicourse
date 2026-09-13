@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════
-   MAIN JS — Trion School AI Vibecoding Course
+   MAIN JS — Trion Education AI Vibecoding Course
    Navbar, FAQ accordion, form validation, counters, parallax
    ═══════════════════════════════════════════════════════ */
 
