@@ -10,13 +10,12 @@
 import { auth } from './firebase-config.js';
 import {
   signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  updateProfile,
   signInWithPopup,
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
 } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js';
+
 
 // ─── State ────────────────────────────────────────────
 const googleProvider = new GoogleAuthProvider();
@@ -44,18 +43,14 @@ function getErrorMsg(code) {
 /* ════════════════════════════════════════════════════════
    MODAL HELPERS
 ════════════════════════════════════════════════════════ */
-function openModal(tab = 'signin') {
+function openModal() {
   const modal = document.getElementById('authModal');
   if (!modal) return;
   modal.removeAttribute('hidden');
-  // Prevent body scroll
   document.body.style.overflow = 'hidden';
-  // Animate in
   requestAnimationFrame(() => modal.classList.add('is-visible'));
-  switchTab(tab);
-  // Focus first input
-  const firstInput = modal.querySelector(`#${tab === 'signin' ? 'siEmail' : 'suName'}`);
-  setTimeout(() => firstInput?.focus(), 150);
+  // Focus email input
+  setTimeout(() => modal.querySelector('#siEmail')?.focus(), 150);
 }
 
 function closeModal() {
@@ -67,37 +62,14 @@ function closeModal() {
     modal.setAttribute('hidden', '');
     clearErrors();
     document.getElementById('signInForm')?.reset();
-    document.getElementById('signUpForm')?.reset();
   }, 320);
 }
 
-function switchTab(tab) {
-  const tabs      = document.querySelectorAll('.auth-tab');
-  const signInForm = document.getElementById('signInForm');
-  const signUpForm = document.getElementById('signUpForm');
-  const title      = document.getElementById('authModalTitle');
 
-  tabs.forEach(t => {
-    const isActive = t.dataset.tab === tab;
-    t.classList.toggle('active', isActive);
-    t.setAttribute('aria-selected', String(isActive));
-  });
-
-  if (tab === 'signin') {
-    signInForm?.removeAttribute('hidden');
-    signUpForm?.setAttribute('hidden', '');
-    if (title) title.textContent = 'Жүйеге кіру';
-  } else {
-    signUpForm?.removeAttribute('hidden');
-    signInForm?.setAttribute('hidden', '');
-    if (title) title.textContent = 'Тіркелу';
-  }
-  clearErrors();
-}
 
 function clearErrors() {
-  document.getElementById('signInError') && (document.getElementById('signInError').textContent = '');
-  document.getElementById('signUpError') && (document.getElementById('signUpError').textContent = '');
+  const siErr = document.getElementById('signInError');
+  if (siErr) siErr.textContent = '';
 }
 
 function setError(elId, msg) {
@@ -136,41 +108,6 @@ async function handleSignIn(e) {
   }
 }
 
-async function handleSignUp(e) {
-  e.preventDefault();
-  const name     = document.getElementById('suName')?.value.trim();
-  const email    = document.getElementById('suEmail')?.value.trim();
-  const password = document.getElementById('suPassword')?.value;
-  const confirm  = document.getElementById('suPasswordConfirm')?.value;
-
-  if (!name || !email || !password || !confirm) return;
-
-  if (password !== confirm) {
-    setError('signUpError', 'Құпиясөздер сәйкес келмейді');
-    return;
-  }
-  if (password.length < 6) {
-    setError('signUpError', 'Құпиясөз кемінде 6 таңбадан тұруы керек');
-    return;
-  }
-
-  setError('signUpError', '');
-  setLoading('signUpBtnText', true, 'Тіркелу');
-  try {
-    const cred = await createUserWithEmailAndPassword(auth, email, password);
-    await updateProfile(cred.user, { displayName: name });
-    // Force re-read updated profile
-    currentUser = { ...cred.user, displayName: name };
-    closeModal();
-    updateNavUI(currentUser);
-    updateCoursesSection(currentUser);
-  } catch (err) {
-    const msg = getErrorMsg(err.code);
-    if (msg) setError('signUpError', msg);
-  } finally {
-    setLoading('signUpBtnText', false, 'Тіркелу');
-  }
-}
 
 async function handleGoogleSignIn() {
   const btn = document.getElementById('btnGoogle');
